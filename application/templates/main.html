@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lobby</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href = {{url_for('auditorium')}}>Auditorium</a></li>
+            <li><a href = {{url_for('exhibits')}} >Exhibits</a></li>
+            <li><a href = {{url_for('committee')}}>Our Team</a></li>
+            <li><a href= {{url_for('photobooth')}}>Photo Booth</a></li>
+        </ul>
+    </nav>
+</header>
+    <div>
+        <img id=lobby src="../static/images/lobby.jpg" alt="lobby">
+        <div id = links>
+            <a id = a href = {{url_for('auditorium')}} style="background-color: #FFFF00">Auditorium</a>
+            <a id = b href = {{url_for('exhibits')}} style="background-color: #FFFF00">Exhibits</a>
+            <a id = c href = {{url_for('committee')}} style="background-color: #FFFF00">Our Team</a>
+            <a id = d href = {{url_for('photobooth')}} style="background-color: #FFFF00">Photo booth</a>
+        </div>
+    </div>
+
+
+</body>
+</html>

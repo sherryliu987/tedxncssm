@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auditorium</title>
+    <link rel="stylesheet" href="../static/css/auditorium.css">
+
+</head>
+<body>
+
+    <iframe onload="resizeIframe(this)" width="450px" height="400px" src="https://www.youtube.com/embed/D1-WuBbVe2E"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <img class = auditorium src="../static/images/auditorium.jpg" alt="auditorium">
+    <div id="home_link">
+        <a href={{url_for('home')}}>Back to Lobby</a>
+    </div>
+
+
+</body>
+
+<script type="text/javascript">
+    function resizeIframe(iframe) {
+        iframe.height = iframe.contentWindow.document.body.offsetHeight + "px";
+        console.log(iframe.contentWindow.document.body.offsetHeight + "px")
+    }
+</script>
+
+</html>
