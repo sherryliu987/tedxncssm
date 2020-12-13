@@ -30,10 +30,11 @@
         <button id="screenshot-button">Manual Photo</button>
         <button id="auto_mode">Countdown!</button>
         <button id="download">Download Image</button>
+        <label for="filter"></label>
         <select name="filter" id="filter">
-            <option selected = selected>Ashes Logo</option>
-            <option>TEDxNCSSM Logo</option>
-            <option>Speakers</option>
+            <option value = "Ashes" selected = selected>Ashes Logo</option>
+            <option value = "Logo">TEDxNCSSM Logo</option>
+            <option value = "Speakers">Speakers</option>
         </select>
     </div>
 
@@ -83,6 +84,7 @@
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext('2d');
     const sound = new Audio("../static/audio/camera_go_click.mp3");
+    const filter = document.getElementById("filter")
 
     let pressed = false;
 
@@ -111,7 +113,13 @@
 
 
         const logo = new Image();
-        logo.src = "../static/images/transparent.png";
+
+        if(filter.value === "Ashes"){
+            logo.src = "../static/images/transparent.png";
+        }else{
+            logo.src = "../static/images/TEDxNCSSM Logo.png";
+        }
+
         console.log(canvas.width);
             ctx.drawImage(logo, 0, 0, canvas.width/4, canvas.width/4 * 607 / 575)
         img.src = canvas.toDataURL("image/webp");
