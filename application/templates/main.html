@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lobby</title>
+    <title>TEDx Lobby</title>
     <link rel="stylesheet" href="../static/css/main.css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="../static/scripts/jquery.bpopup.min.js"></script>
     <script src="../static/scripts/countdown.js"></script>
+    <script src="../static/scripts/imageMapResizer.min.js"></script>
     <script>
         $( document ).ready(function() {
             let isshow = sessionStorage.getItem('isshow');
             if(isshow==null){
                 sessionStorage.setItem('isshow', "1");
-                $('#popup_this').bPopup();
-
+                $('#popup_this').bPopup()
             }
         });
     </script>
@@ -32,7 +32,9 @@
             <img src="../static/images/lobby.png" alt="lobby" usemap="#lobbymap" >
         </div>
 
-        <map name="lobbymap">
+        <div id="lobby_map">
+        </div>
+        <map id="lm" name="lobbymap">
             <area alt="" title="" href={{url_for('exhibits')}} coords="1451,358,1217,292" shape="rect">
             <area  alt="" title="" href={{url_for('committee')}} coords="1449,440,1214,372" shape="rect">
             <area  alt="" title="" href={{url_for('sponsors')}} coords="1217,457,1449,522" shape="rect">
@@ -40,6 +42,10 @@
             <area  alt="" title="" href={{url_for('photobooth')}} coords="1028,706,78" shape="circle">
         </map>
     </div>
+
+<script>
+    imageMapResize();
+</script>
 
 </body>
 </html>
