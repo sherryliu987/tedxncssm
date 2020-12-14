@@ -7,29 +7,20 @@
 
 </head>
 <body>
-<header>
-    <nav>
-        <ul>
-            <li><a href = {{url_for('auditorium')}}>Auditorium</a></li>
-            <li><a href = {{url_for('exhibits')}} >Exhibits</a></li>
-            <li><a href = {{url_for('committee')}}>Our Team</a></li>
-            <li><a href= {{url_for('photobooth')}}>Photo Booth</a></li>
-        </ul>
-    </nav>
-</header>
+
     <div>
         <div id="lobby">
-            <img src="../static/images/lobby.jpg" alt="lobby">
+            <img src="../static/images/lobby.png" alt="lobby" usemap="#lobbymap" >
         </div>
 
-        <div id = links>
-            <a id = a href = {{url_for('auditorium')}} style="background-color: #FFFF00">Auditorium</a>
-            <a id = b href = {{url_for('exhibits')}} style="background-color: #FFFF00">Exhibits</a>
-            <a id = c href = {{url_for('committee')}} style="background-color: #FFFF00">Our Team</a>
-            <a id = d href = {{url_for('photobooth')}} style="background-color: #FFFF00">Photo booth</a>
-        </div>
+        <map name="lobbymap">
+            <area alt="" title="" href={{url_for('exhibits')}} coords="1451,358,1217,292" shape="rect">
+            <area  alt="" title="" href={{url_for('committee')}} coords="1449,440,1214,372" shape="rect">
+            <area  alt="" title="" href={{url_for('sponsors')}} coords="1217,457,1449,522" shape="rect">
+            <area  alt="" title="" href={{url_for('auditorium')}} coords="1215,116,1449,268" shape="rect">
+            <area  alt="" title="" href={{url_for('photobooth')}} coords="1028,706,78" shape="circle">
+        </map>
     </div>
-
 
 </body>
 </html>

@@ -15,13 +15,17 @@
         <a href={{url_for('home')}}>Back to Lobby</a>
     </div>
 
+    <div class="myDIV">Hover over me.</div>
+    <div class="hide">I am shown when someone hovers over the div above.</div>
+
 
 </body>
 
 <script type="text/javascript">
     function resizeIframe(iframe) {
         iframe.height = iframe.contentWindow.document.body.offsetHeight + "px";
-        console.log(iframe.contentWindow.document.body.offsetHeight + "px")
+        console.log(iframe.contentWindow.document.body.offsetHeight + "px");
+        console.log("HELLO");
     }
 </script>
 

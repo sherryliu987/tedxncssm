@@ -26,3 +26,7 @@ def committee():
 @app.route("/photobooth")
 def photobooth():
     return render_template("photobooth.html")
+
+@app.route("/sponsors")
+def sponsors():
+    return render_template("sponsors.html")

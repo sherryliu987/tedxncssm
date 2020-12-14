@@ -8,13 +8,6 @@
 </head>
 <body id='body' onLoad="startVideo()">
 
-<!--<audio id='camera_sound' controls="controls">-->
-<!--    <source src="../static/images/camera_go_click.mp3" type="audio/mp3">-->
-<!--</audio>-->
-
-<!--<embed src="../static/images/camera_go_click.mp3" loop="true" autostart="true" width="2"-->
-<!--       height="0">-->
-
 <div id="screenshot" >
 
     <span id="video-box">
@@ -22,22 +15,19 @@
             <img id="ted-logo" src="../static/images/transparent.png" alt="TED logo">
         </span>
         <span><video autoplay></video></span>
-        <span id = "photo_with_border"><img id="user_photo" src="../static/images/placeholder.png"
-                                              alt="screenshot"></span>
+        <span id = "photo_with_border"><img id="user_photo" src="../static/images/placeholder.png" alt="screenshot"></span>
     </span>
     <h1 id="countdown"><b></b></h1>
     <div id="buttons">
         <button id="screenshot-button">Manual Photo</button>
         <button id="auto_mode">Countdown!</button>
         <button id="download">Download Image</button>
-        <label for="filter"></label>
         <select name="filter" id="filter">
             <option value = "Ashes" selected = selected>Ashes Logo</option>
             <option value = "Logo">TEDxNCSSM Logo</option>
             <option value = "Speakers">Speakers</option>
         </select>
     </div>
-
 
 </div>
 
@@ -89,7 +79,7 @@
     let pressed = false;
 
     const constraints = {
-        video: true,
+        video: true
     };
 
 
@@ -113,15 +103,18 @@
 
 
         const logo = new Image();
+        let scale_factor;
 
         if(filter.value === "Ashes"){
             logo.src = "../static/images/transparent.png";
+            scale_factor = 607 / 575;
         }else{
             logo.src = "../static/images/TEDxNCSSM Logo.png";
+            scale_factor = 1210 / 370;
         }
 
         console.log(canvas.width);
-            ctx.drawImage(logo, 0, 0, canvas.width/4, canvas.width/4 * 607 / 575)
+            ctx.drawImage(logo, 0, 0, canvas.width/4, canvas.width/4 * scale_factor)
         img.src = canvas.toDataURL("image/webp");
         sound.play();
         document.getElementById('body').appendChild(img)
