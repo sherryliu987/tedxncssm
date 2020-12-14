@@ -3,156 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Photobooth</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../static/css/photobooth.css">
+    <link rel="shortcut icon" href="#">
 </head>
 <body id='body' onLoad="startVideo()">
 
-<div id="screenshot" >
+<div id="screenshot">
 
     <span id="video-box">
         <span id="video_overlays">
-            <img id="ted-logo" src="../static/images/transparent.png" alt="TED logo">
+            <img id="ted-logo" src="../static/images/photobooth%20filters/Ashes_Logo.png" alt="TED logo">
         </span>
         <span><video autoplay></video></span>
-        <span id = "photo_with_border"><img id="user_photo" src="../static/images/placeholder.png" alt="screenshot"></span>
+        <span id="photo_with_border"><img id="user_photo" src="../static/images/placeholder.png" alt="screenshot"></span>
     </span>
+
     <h1 id="countdown"><b></b></h1>
+
     <div id="buttons">
         <button id="screenshot-button">Manual Photo</button>
         <button id="auto_mode">Countdown!</button>
         <button id="download">Download Image</button>
-        <select name="filter" id="filter">
-            <option value = "Ashes" selected = selected>Ashes Logo</option>
-            <option value = "Logo">TEDxNCSSM Logo</option>
-            <option value = "Speakers">Speakers</option>
+        <label for="filter">Filter</label>
+        <select onLoad="setFilter()" name="filter" id="filter" onchange="setFilter()">
+            <option value="Ashes" selected=selected>Ashes Logo</option>
+            <option value="Logo">TEDxNCSSM Logo</option>
+            <option value="Speakers">Speakers</option>
         </select>
     </div>
 
 </div>
 
-<div id="home_link">
-    <a href={{url_for('home')}}>Back to Lobby</a>
-</div>
+<p align="center"><a href={{url_for('home')}}>
+    <button>Back to Lobby</button>
+</a></p>
 
-<script>
-    function writeNext(i, cd){
-        cd.textContent = i;
-
-        if(i === 1){
-            screenshotButton.click();
-            cd.textContent = "";
-            return;
-        }
-
-        setTimeout(function(){
-            writeNext(i - 1, cd);
-        }, 1000);
-    }
-
-    const autoButton = document.querySelector("#auto_mode");
-    autoButton.onclick = function(){
-        pressed = true;
-
-        let cd = document.querySelector("#countdown")
-
-        writeNext(5, cd);
-
-        console.log("PHOTO DONE!");
-    }
-
-
-
-
-</script>
-
-<script>
-    const screenshotButton = document.querySelector("#screenshot-button");
-    const img = document.querySelector("#screenshot #user_photo");
-    const video = document.querySelector("#screenshot video");
-    const download = document.querySelector("#download")
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext('2d');
-    const sound = new Audio("../static/audio/camera_go_click.mp3");
-    const filter = document.getElementById("filter")
-
-    let pressed = false;
-
-    const constraints = {
-        video: true
-    };
-
-
-    function handleError(error) {
-        console.error("Error: ", error);
-    }
-
-    function startVideo() {
-        navigator.mediaDevices
-            .getUserMedia(constraints)
-            .then(handleSuccess)
-            .catch(handleError);
-    }
-
-    screenshotButton.onclick = video.onclick = function () {
-        pressed = true;
-        canvas.width = video.videoWidth * 7/8;
-        canvas.height = video.videoHeight * 7/8;
-        ctx.scale(7/8, 7/8)
-        ctx.drawImage(video, 0,0, video.videoWidth, video.videoHeight)
-
-
-        const logo = new Image();
-        let scale_factor;
-
-        if(filter.value === "Ashes"){
-            logo.src = "../static/images/transparent.png";
-            scale_factor = 607 / 575;
-        }else{
-            logo.src = "../static/images/TEDxNCSSM Logo.png";
-            scale_factor = 1210 / 370;
-        }
-
-        console.log(canvas.width);
-            ctx.drawImage(logo, 0, 0, canvas.width/4, canvas.width/4 * scale_factor)
-        img.src = canvas.toDataURL("image/webp");
-        sound.play();
-        document.getElementById('body').appendChild(img)
-        console.log("uhh image added?");
-
-    };
-
-    download.onclick = function(){
-        downloadCanvas();
-    }
-
-    function downloadCanvas(){
-        // get canvas data
-        let image;
-        console.log(pressed)
-        if(pressed){
-            image = canvas.toDataURL();
-            // create temporary link
-            const tmpLink = document.createElement('a');
-            tmpLink.download = 'TEDxYouth@NCSSM Photobooth.png'; // set the name of the download file
-            tmpLink.href = image;
-
-            // temporarily add link to body and initiate the download
-            document.body.appendChild( tmpLink );
-            tmpLink.click();
-            document.body.removeChild( tmpLink );
-        }else{
-            alert("You have not taken an image.");
-        }
-
-
-    }
-
-    function handleSuccess(stream) {
-        screenshotButton.disabled = false;
-        video.srcObject = stream;
-    }
-</script>
+<script src="../static/scripts/photobooth.js"> </script>
 
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Auditorium</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/css/auditorium.css">
 
 </head>
@@ -11,10 +12,7 @@
     <iframe onload="resizeIframe(this)" width="450px" height="400px" src="https://www.youtube.com/embed/D1-WuBbVe2E"
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <img class = auditorium src="../static/images/auditorium.jpg" alt="auditorium">
-    <div id="home_link">
-        <a href={{url_for('home')}}>Back to Lobby</a>
-    </div>
-
+    <p align="center"><a href={{url_for('home')}} ><button>Back to Lobby</button></a></p>
     <div class="myDIV">Hover over me.</div>
     <div class="hide">I am shown when someone hovers over the div above.</div>
 

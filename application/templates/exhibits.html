@@ -3,11 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Exhibits</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/exhibits.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
 
-<h1>ART PIECES GO HERE YEYE</h1>
+<div class="slideshow-container">
 
-<a href={{url_for('home')}}>Back to Lobby</a>
+    <div  class="mySlides">
+        <img id="sample1" src="../static/images/art/Sample_art.jpg" alt="sample art">
+        <div>Artist Name</div>
+        <p>Artist Statement Here</p>
+    </div>
+    <div id="sample2"class="mySlides">
+        <audio controls>
+            <source src="../static/audio/sample music.mp3" type="audio/mp3">
+        </audio>
+        <div>Artist Name</div>
+        <p>Artist Statement Here</p>
+    </div>
+
+</div>
+
+<div class="w3-center">
+    <button onclick="plusDivs(-1)">&#10094; Prev</button>
+    <button onclick="plusDivs(1)">Next &#10095;</button>
+
+    <button onclick="currentDiv(1)">1</button>
+    <button onclick="currentDiv(2)">2</button>
+</div>
+<br>
+
+<p align="center"><a href={{url_for('home')}} ><button>Back to Lobby</button></a></p>
+
 </body>
+
+<script>
+    let slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        let i;
+        const x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+</script>
+
 </html>
