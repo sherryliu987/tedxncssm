@@ -8,23 +8,13 @@
 
 </head>
 <body>
+<div class="container">
+    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+</div>
 
-    <iframe onload="resizeIframe(this)" width="450px" height="400px" src="https://www.youtube.com/embed/D1-WuBbVe2E"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <img class = auditorium src="../static/images/auditorium.jpg" alt="auditorium">
+     <img src="../static/images/auditorium.png" alt="auditorium">
     <p align="center"><a href={{url_for('home')}} ><button>Back to Lobby</button></a></p>
-    <div class="myDIV">Hover over me.</div>
-    <div class="hide">I am shown when someone hovers over the div above.</div>
-
 
 </body>
-
-<script type="text/javascript">
-    function resizeIframe(iframe) {
-        iframe.height = iframe.contentWindow.document.body.offsetHeight + "px";
-        console.log(iframe.contentWindow.document.body.offsetHeight + "px");
-        console.log("HELLO");
-    }
-</script>
 
 </html>
