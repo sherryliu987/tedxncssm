@@ -23,9 +23,11 @@ def exhibits():
 def committee():
     return render_template("committee.html")
 
+
 @app.route("/photobooth")
 def photobooth():
     return render_template("photobooth.html")
+
 
 @app.route("/sponsors")
 def sponsors():
