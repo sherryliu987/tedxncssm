@@ -7,6 +7,7 @@ const displayedImage = document.querySelector("#screenshot #user_photo");
 let filterImage = document.getElementById("ted-logo");
 const video = document.querySelector("#screenshot video");
 const cameraSound = new Audio("../static/audio/camera_go_click.mp3");
+let cd = document.querySelector("#countdown")
 
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext('2d');
@@ -15,30 +16,63 @@ let scale_factor;
 let size_factor;
 let pressed = false;
 
-
 //countdown and click function
 autoButton.onclick = function () {
-    pressed = true;
-    let cd = document.querySelector("#countdown")
-    writeNext(5, cd);
+    filterSelect.value="Ashes"
+    setFilter();
+    writeNext(5,1);
 }
 
 //recursive function for countdown and click
-function writeNext(i, cd) {
+function writeNext(i, auto_num) {
+    console.log("hello" + i + " " + auto_num);
     cd.textContent = i;
     if (i === 1) {
-        screenshotButton.click();
-        cd.textContent = "";
-        return;
+        pressed = true;
+        cameraSound.play();
+        if(auto_num === 1){
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            ctx.scale(1/2, 1/2)
+            ctx.drawImage(video, 0, 0, video.videoWidth, video.videoHeight)
+            ctx.drawImage(filterImage, 0, 0, canvas.width / size_factor, canvas.width / size_factor * scale_factor)
+            displayedImage.src = canvas.toDataURL("image/webp");
+            filterSelect.value="Logo"
+            setFilter();
+            writeNext(5, 2 )
+        }else if(auto_num === 2){
+            ctx.drawImage(video, canvas.width, 0, video.videoWidth, video.videoHeight)
+            ctx.drawImage(filterImage, canvas.width, 0, canvas.width / size_factor, canvas.width / size_factor * scale_factor)
+            displayedImage.src = canvas.toDataURL("image/webp");
+            filterSelect.value="Speakers"
+            setFilter();
+            writeNext(5, 3 )
+        }else if(auto_num === 3){
+            ctx.drawImage(video, 0, canvas.height, video.videoWidth, video.videoHeight)
+            ctx.drawImage(filterImage, 0, canvas.height, canvas.width / size_factor, canvas.width / size_factor * scale_factor)
+            displayedImage.src = canvas.toDataURL("image/webp");
+            filterSelect.value="Ashes"
+            setFilter();
+            writeNext(5, 4 )
+        }else{
+            ctx.drawImage(video, canvas.width, canvas.height, video.videoWidth, video.videoHeight)
+            ctx.drawImage(filterImage, canvas.width, canvas.height, canvas.width / size_factor, canvas.width / size_factor * scale_factor)
+            displayedImage.src = canvas.toDataURL("image/webp");
+            cd.textContent = "";
+        }
+
+    }else{
+        setTimeout(function () {
+            writeNext(i - 1, auto_num);
+        }, 1000);
     }
-    setTimeout(function () {
-        writeNext(i - 1, cd);
-    }, 1000);
+
 }
 
 //screenshot function
 screenshotButton.onclick = video.onclick = function () {
     pressed = true;
+
     canvas.width = video.videoWidth * 7 / 8;
     canvas.height = video.videoHeight * 7 / 8;
     ctx.scale(7 / 8, 7 / 8)
