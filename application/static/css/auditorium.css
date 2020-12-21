@@ -17,7 +17,9 @@
 }
 
 h1, h2, h3, p{
-    font-family: Gill Sans, sans-serif;
+    font-family: Helvetica, Sans-Serif;
+    color:#FF2B06;
+
 }
 
 #heather{
@@ -47,5 +49,5 @@ h1, h2, h3, p{
     width: 20%;
     height: 100%;
     z-index: -1;
-    background-color: #FF2B06;
+    background-color: black;
 }
