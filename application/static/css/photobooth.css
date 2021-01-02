@@ -11,12 +11,21 @@
     text-align:center;
 }
 
+#curtains{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 80%;
+    height: 100%;
+    z-index: -1;
+}
+
 #screenshot{
     display: inline;
 }
 
 #ted-logo{
-    width:100%;
+    width:400%;
     height:100%;
 }
 

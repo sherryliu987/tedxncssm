@@ -87,20 +87,25 @@ screenshotButton.onclick = video.onclick = function () {
 //sets filter depending on dropdown
 function setFilter() {
     if (filterSelect.value === "Ashes") {
-        filterImage.src = "../static/images/photobooth filters/Ashes_Logo.png";
-        scale_factor = 607 / 575;
-        size_factor = 4;
-        filterImage.style.width = "100%";
+        filterImage.src = "../static/images/photobooth filters/test_filter.png";
+        scale_factor = 9/16;
+        size_factor = 1;
+        filterImage.style.width = "400%";
     } else if(filterSelect.value === "Logo"){
         filterImage.src = "../static/images/photobooth filters/TEDxNCSSM Logo.png";
         scale_factor = 370 / 1210;
         size_factor = 1.5;
         filterImage.style.width = "300px";
-    }else{
+    }else if(filterSelect.value === "Speakers"){
         filterImage.src = "../static/images/photobooth filters/giovanni.png";
         scale_factor = 1;
         size_factor = 3;
         filterImage.style.width = "100px";
+    }else{
+        filterImage.src = "../static/images/photobooth filters/Phoenix.png";
+        scale_factor = 3;
+        size_factor = 2;
+        filterImage.style.width = "250px";
     }
 }
 

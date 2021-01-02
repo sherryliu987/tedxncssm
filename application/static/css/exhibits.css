@@ -1,17 +1,53 @@
-#sample1{
-    align-self: center;
-    height:100%;
-    width:100%;
+#art1{
+    width:500px;
+    padding-top:2%;
+}
+
+#art2{
+    width:500px;
+    padding-top:2%;
+}
+
+.mySlides{
+    /*background-color: red;*/
+    text-align: center;
+}
+
+.art3{
+    width:400px;
+    padding-top:2%;
+}
+
+#art4{
+    width:800px;
+    padding-top:2%;
+}
+
+.music{
+    padding-top:2%;
+}
+
+#art5{
+    width:400px;
+    padding-top:2%;
 }
 
 #sample2{
-    padding:23%;
 }
 
-.slideshow-container {
-    width:500px;
-    height:500px;
-    position: relative;
-    margin: auto;
-    align-content: center;
+.descr1{
+    padding-right:10%;
+    padding-left:10%;
+}
+
+/*.slideshow-container {*/
+/*    width:500px;*/
+/*    height:500px;*/
+/*    position: relative;*/
+/*    margin: auto;*/
+/*    align-content: center;*/
+/*}*/
+
+.w3-center{
+    bottom:0;
 }
