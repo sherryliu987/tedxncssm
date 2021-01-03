@@ -35,28 +35,28 @@ function writeNext(i, auto_num) {
             canvas.height = video.videoHeight;
             ctx.scale(1/2, 1/2)
             ctx.drawImage(video, 0, 0, video.videoWidth, video.videoHeight)
-            ctx.drawImage(filterImage, 0, 0, canvas.width / size_factor, canvas.width / size_factor * scale_factor)
+            ctx.drawImage(filterImage, 0, 0, canvas.width / size_factor * 7/8, canvas.width / size_factor * scale_factor * 7/8)
             displayedImage.src = canvas.toDataURL("image/webp");
             filterSelect.value="Logo"
             setFilter();
             writeNext(5, 2 )
         }else if(auto_num === 2){
             ctx.drawImage(video, canvas.width, 0, video.videoWidth, video.videoHeight)
-            ctx.drawImage(filterImage, canvas.width, 0, canvas.width / size_factor, canvas.width / size_factor * scale_factor)
+            ctx.drawImage(filterImage, canvas.width, 0, canvas.width / size_factor * 7/8, canvas.width / size_factor * scale_factor * 7/8)
             displayedImage.src = canvas.toDataURL("image/webp");
             filterSelect.value="Speakers"
             setFilter();
             writeNext(5, 3 )
         }else if(auto_num === 3){
             ctx.drawImage(video, 0, canvas.height, video.videoWidth, video.videoHeight)
-            ctx.drawImage(filterImage, 0, canvas.height, canvas.width / size_factor, canvas.width / size_factor * scale_factor)
+            ctx.drawImage(filterImage, 0, canvas.height, canvas.width / size_factor * 7/8, canvas.width / size_factor * scale_factor * 7/8)
             displayedImage.src = canvas.toDataURL("image/webp");
-            filterSelect.value="Ashes"
+            filterSelect.value="Phoenix"
             setFilter();
             writeNext(5, 4 )
         }else{
             ctx.drawImage(video, canvas.width, canvas.height, video.videoWidth, video.videoHeight)
-            ctx.drawImage(filterImage, canvas.width, canvas.height, canvas.width / size_factor, canvas.width / size_factor * scale_factor)
+            ctx.drawImage(filterImage, canvas.width, canvas.height, canvas.width / size_factor * 7/8, canvas.width / size_factor * scale_factor * 7/8)
             displayedImage.src = canvas.toDataURL("image/webp");
             cd.textContent = "";
         }
@@ -87,26 +87,17 @@ screenshotButton.onclick = video.onclick = function () {
 //sets filter depending on dropdown
 function setFilter() {
     if (filterSelect.value === "Ashes") {
-        filterImage.src = "../static/images/photobooth filters/test_filter.png";
-        scale_factor = 9/16;
-        size_factor = 1;
-        filterImage.style.width = "400%";
+        filterImage.src = "../static/images/photobooth filters/Logos.png";
     } else if(filterSelect.value === "Logo"){
-        filterImage.src = "../static/images/photobooth filters/TEDxNCSSM Logo.png";
-        scale_factor = 370 / 1210;
-        size_factor = 1.5;
-        filterImage.style.width = "300px";
+        filterImage.src = "../static/images/photobooth filters/Thank you for coming....png";
     }else if(filterSelect.value === "Speakers"){
-        filterImage.src = "../static/images/photobooth filters/giovanni.png";
-        scale_factor = 1;
-        size_factor = 3;
-        filterImage.style.width = "100px";
-    }else{
         filterImage.src = "../static/images/photobooth filters/Phoenix.png";
-        scale_factor = 3;
-        size_factor = 2;
-        filterImage.style.width = "250px";
+    }else{
+        filterImage.src = "../static/images/photobooth filters/Frame.png";
     }
+    scale_factor = 3/4;
+    size_factor = .87;
+    filterImage.style.width = "358%";
 }
 
 //download image

@@ -32,3 +32,11 @@ def photobooth():
 @app.route("/sponsors")
 def sponsors():
     return render_template("sponsors.html")
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/speakers")
+def speakers():
+    return render_template("speakers.html")
