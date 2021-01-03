@@ -87,11 +87,11 @@ screenshotButton.onclick = video.onclick = function () {
 //sets filter depending on dropdown
 function setFilter() {
     if (filterSelect.value === "Ashes") {
-        filterImage.src = "../static/images/photobooth filters/Logos.png";
+        filterImage.src = "../static/images/photobooth filters/Recording.png";
     } else if(filterSelect.value === "Logo"){
-        filterImage.src = "../static/images/photobooth filters/Thank you for coming....png";
+        filterImage.src = "../static/images/photobooth filters/Thanks for Coming.png";
     }else if(filterSelect.value === "Speakers"){
-        filterImage.src = "../static/images/photobooth filters/Phoenix.png";
+        filterImage.src = "../static/images/photobooth filters/Stars.png";
     }else{
         filterImage.src = "../static/images/photobooth filters/Frame.png";
     }
