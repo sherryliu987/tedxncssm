@@ -17,7 +17,10 @@
 .header-button {
     padding: 20px;
     background-color: transparent;
-    font-weight: bold;
+    font-size: 22px;
+    font-weight: 200;
+    font-family: Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-style: italic;
     color: white;
 }
 
@@ -63,3 +66,9 @@
     color: white;
     padding: 0.5rem 0.5rem;
 }
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
