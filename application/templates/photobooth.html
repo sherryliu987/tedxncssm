@@ -7,6 +7,7 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../static/css/photobooth.css">
     <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="../static/css/whole_website.css">
 </head>
 <body id='body' onLoad="startVideo()">
 
@@ -39,9 +40,11 @@
 
 </div>
 
-<p align="center"><a href={{url_for('home')}}>
-    <button>Back to Lobby</button>
-</a></p>
+<form style="text-align: center" action={{url_for('home')}} method="get">
+    <button type="submit" class="btn btn-outline-primary">Back to
+        Lobby
+    </button>
+</form>
 
 <script src="../static/scripts/photobooth.js"> </script>
 

@@ -1,0 +1,20 @@
+
+.btn-outline-primary{
+    border-color:  #FF2B06;
+    color:#FF2B06;
+}
+
+.btn-outline-primary:hover {
+    color: white;
+    background-color:  #FF2B06;
+    border-color: #FF2B06;
+}
+
+body{
+    background-color: black;
+}
+
+p, h1, h2, h3{
+    color:white;
+}
+/*.btn.btn-outline-primary:visited */

@@ -5,7 +5,7 @@
     <title>Auditorium</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/css/auditorium.css">
-
+    <link rel="stylesheet" href="../static/css/whole_website.css">
 </head>
 <body>
 
@@ -33,21 +33,11 @@
 <!--            <p id="speaker_bio">Heather Chandler's Bio</p>-->
 <!--&lt;!&ndash;        </div>&ndash;&gt;-->
 <!--    </div>-->
-    <form action={{url_for('home')}} method="get">
-        <button id="lobby_button"  type="submit" class="btn btn-outline-primary">Back to Lobby</button>
+    <form style="text-align: center" action={{url_for('home')}} method="get">
+        <button id="lobby_button" type="submit" class="btn btn-outline-primary">Back to
+            Lobby
+        </button>
     </form>
-    <style>
-        .btn {
-        border-color:  #FF2B06;
-        color:#FF2B06;
-        }
-
-        .btn-outline-primary:hover {
-            color: white;
-            background-color: #FF2B06;
-            border-color: #FF2B06;
-        }
-    </style>
 
 <!--<script>-->
 <!--    function showBio(){-->

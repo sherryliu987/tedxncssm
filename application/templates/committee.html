@@ -5,7 +5,7 @@
     <title>Committee</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/css/committee.css">
-
+    <link rel="stylesheet" href="../static/css/whole_website.css">
 </head>
 <body>
 
@@ -153,9 +153,11 @@
             </div>
         </div>
 
-        <div class="row justify-content-center">
-            <a href={{url_for('home')}} ><button>Back to Lobby</button></a>
-        </div>
+        <form style="text-align: center" action={{url_for('home')}} method="get">
+            <button type="submit" class="btn btn-outline-primary">Back to
+                Lobby
+            </button>
+        </form>
 
     </div>
 
