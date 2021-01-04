@@ -21,7 +21,7 @@
 }
 
 body{
-    background-color: #FF2B06;
+    background-color: black;
 }
 
 #home_link{
@@ -45,7 +45,7 @@ span{
 
 #user_photo{
     float:right;
-    border: 10px solid #000;
+    border: 10px solid #FF2B06;
     margin:15px;
 }
 
