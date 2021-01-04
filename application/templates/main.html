@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>TEDx Lobby</title>
     <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="../static/scripts/jquery.bpopup.min.js"></script>
     <script src="../static/scripts/countdown.js"></script>
@@ -17,11 +18,16 @@
             }
         });
     </script>
+    <style>
+        h3, p, a{
+            font-family: Helvetica, Sans-Serif, serif;
+        }
+    </style>
 </head>
 <body>
 
 <div id="popup_this">
-    <h3>Welcome to TEDxYouth @NCSSM 2020!</h3>
+    <h3 class="animate__animated animate__bounce">Welcome to TEDxYouth @NCSSM 2020!</h3>
     <p id="countdown"></p>
     <p id="countdown-message">until the event begins on January 9th. Get excited!</p>
     <a href="https://www.eventbrite.com/e/tedxyouthncssm-tickets-130888756795?fbclid=IwAR07_MK7VXGKDv3LdfCZyDuf_MUt2im1DU-ZnnWeMrj7uyX-kBrQLXIAHk8" target="_blank">Signup and view this year's schedule HERE</a>
