@@ -22,6 +22,17 @@ h1, h2, h3, p{
 
 }
 
+.btn {
+    border-color:  #FF2B06;
+    color:#FF2B06;
+}
+
+.btn-outline-primary:hover {
+    color: white;
+    background-color: #FF2B06;
+    border-color: #FF2B06;
+}
+
 #heather{
     top:20%;
 }
@@ -29,7 +40,7 @@ h1, h2, h3, p{
 #lobby_button{
     position:absolute;
     bottom:5%;
-    left:50%;
+    left:45%;
 }
 
 #auditorium {
