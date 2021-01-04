@@ -17,6 +17,11 @@ p, div{
     padding-top:2%;
 }
 
+b{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
 .mySlides{
     /*background-color: red;*/
     text-align: center;
