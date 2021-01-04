@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>TEDx Lobby</title>
     <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/whole_website.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="../static/scripts/jquery.bpopup.min.js"></script>
@@ -33,21 +34,27 @@
     <a href="https://www.eventbrite.com/e/tedxyouthncssm-tickets-130888756795?fbclid=IwAR07_MK7VXGKDv3LdfCZyDuf_MUt2im1DU-ZnnWeMrj7uyX-kBrQLXIAHk8" target="_blank">Signup and view this year's schedule HERE</a>
 </div>
 
+
     <div>
         <div id="lobby">
             <img src="../static/images/lobby.png" alt="lobby" usemap="#lobbymap" >
         </div>
-
-        <div id="lobby_map">
-        </div>
         <map name="lobbymap">
-            <area alt="" title="" href={{url_for('exhibits')}} coords="1451,358,1217,292" shape="rect">
-            <area  alt="" title="" href={{url_for('committee')}} coords="1449,440,1214,372" shape="rect">
-            <area  alt="" title="" href={{url_for('sponsors')}} coords="1217,457,1449,522" shape="rect">
-            <area  alt="" title="" href={{url_for('auditorium')}} coords="1215,116,1449,268" shape="rect">
-            <area  alt="" title="" href={{url_for('photobooth')}} coords="1028,706,78" shape="circle">
+            <area href={{url_for('speakers')}} alt="speakers" title="speakers" href="" coords="1503,476,144"
+            shape="circle">
+            <area href={{url_for('committee')}} alt="committee" title="committee" href="" coords="1834,533,141"
+                  shape="circle">
+            <area href={{url_for('exhibits')}} alt="gallery" title="gallery" href="" coords="577,410,146"
+                  shape="circle">
+            <area href={{url_for('about')}} alt="about" title="about" href="" coords="233,532,144" shape="circle">
+            <area href={{url_for('sponsors')}} alt="sponsors" title="sponsors" href=""
+                  coords="126,1100,120,763,334,758,368,859,337,865,350,1104" shape="poly">
+            <area href={{url_for('photobooth')}} alt="photobooth" title="photobooth" href=""
+                  coords="1468,738,1863,1098" shape="rect">
+            <area target="" alt="schedule" title="schedule" href="" coords="417,653,596,631,641,879,455,905" shape="poly">
+            <area href={{url_for('auditorium')}} alt="auditorium" title="auditorium" href=""
+                  coords="717,659,868,660,868,577,1215,577,1217,659,1361,660,1367,1096,717,1100" shape="poly">
         </map>
-    </div>
 
 <script>
     imageMapResize();
