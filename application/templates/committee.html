@@ -9,58 +9,175 @@
 </head>
 <body>
 
-    <div class="gallery">
+    <div class="container gallery">
 
-        <div class="container gallery__item--1">
-            <img src="../static/images/team%20members/Sree.jpeg" alt="Avatar" class="image" style="width:100%">
-            <div class="middle">
-                <div class="text">
-                    <h2>Sree</h2>
-                    <h6>DPT</h6>
-                    <p>Bio here!!</p>
+        <div class="row justify-content-center">
+            <h1>Meet the Team!</h1>
+        </div>
+
+        <div class="accordion" id="members-accordion">
+            <div class="card">
+                <div class="card-header" id="exec-header">
+                    <button class="btn btn-link btn-block text-left header-button" type="button" data-toggle="collapse" data-target="#exec-collapse" aria-expanded="true" aria-controls="exec-collapse">
+                        Executive Board
+                    </button>
+                </div>
+                <div class="collapse" id="exec-collapse" aria-labelledby="exec-header" data-parent="#members-accordion">
+                    <div class="card-body">
+                        <div class="row">
+                            {% for member in members.exec %}
+                            <div class="col-10 col-sm-6 col-md-4 col-lg-4 col-xl-3 mt-3 mb-3 gallery-column">
+                                <div class="row container d-flex h-100 gallery-item">
+                                    
+                                    <img src="{{member.image}}" alt="Avatar" class="image" style="width:100%">
+                                        <div class="middle mt-3 mb-3 ml-3 mr-3">
+                                            <div class="text">
+                                                <h3>{{member.name}}</h3>
+                                                <h6>{{member.title}}</h6>
+                                            </div>
+                                        </div>
+                                </div>
+                        </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="dpt-header">
+                    <button class="btn btn-link btn-block text-left header-button" type="button" data-toggle="collapse" data-target="#dpt-collapse" aria-expanded="true" aria-controls="dpt-collapse">
+                        Design, Publicity, and Tech Committee
+                    </button>
+                </div>
+                <div class="collapse" id="dpt-collapse" aria-labelledby="dpt-header" data-parent="#members-accordion">
+                    <div class="card-body">
+                        <div class="row">
+                            {% for member in members.dpt %}
+                            <div class="col-10 col-sm-6 col-md-4 col-lg-4 col-xl-3 mt-3 mb-3 gallery-column">
+                                <div class="row container d-flex h-100 gallery-item">
+                                    
+                                    <img src="{{member.image}}" alt="Avatar" class="image" style="width:100%">
+                                        <div class="middle mt-3 mb-3 ml-3 mr-3">
+                                            <div class="text">
+                                                <h3>{{member.name}}</h3>
+                                                <h6>{{member.title}}</h6>
+                                            </div>
+                                        </div>
+                                </div>
+                        </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="speaker-header">
+                    <button class="btn btn-link btn-block text-left header-button" type="button" data-toggle="collapse" data-target="#speaker-collapse" aria-expanded="true" aria-controls="speaker-collapse">
+                        Speaker Committee
+                    </button>
+                </div>
+                <div class="collapse" id="speaker-collapse" aria-labelledby="speaker-header" data-parent="#members-accordion">
+                    <div class="card-body">
+                        <div class="row">
+                            {% for member in members.speaker %}
+                            <div class="col-10 col-sm-6 col-md-4 col-lg-4 col-xl-3 mt-3 mb-3 gallery-column">
+                                <div class="row container d-flex h-100 gallery-item">
+                                    
+                                    <img src="{{member.image}}" alt="Avatar" class="image" style="width:100%">
+                                        <div class="middle mt-3 mb-3 ml-3 mr-3">
+                                            <div class="text">
+                                                <h3>{{member.name}}</h3>
+                                                <h6>{{member.title}}</h6>
+                                            </div>
+                                        </div>
+                                </div>
+                        </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="audience-header">
+                    <button class="btn btn-link btn-block text-left header-button" type="button" data-toggle="collapse" data-target="#audience-collapse" aria-expanded="true" aria-controls="audience-collapse">
+                        Audience Committee
+                    </button>
+                </div>
+                <div class="collapse" id="audience-collapse" aria-labelledby="audience-header" data-parent="#members-accordion">
+                    <div class="card-body">
+                        <div class="row">
+                            {% for member in members.audience %}
+                            <div class="col-10 col-sm-6 col-md-4 col-lg-4 col-xl-3 mt-3 mb-3 gallery-column">
+                                <div class="row container d-flex h-100 gallery-item">
+                                    
+                                    <img src="{{member.image}}" alt="Avatar" class="image" style="width:100%">
+                                        <div class="middle mt-3 mb-3 ml-3 mr-3">
+                                            <div class="text">
+                                                <h3>{{member.name}}</h3>
+                                                <h6>{{member.title}}</h6>
+                                            </div>
+                                        </div>
+                                </div>
+                        </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="food-header">
+                    <button class="btn btn-link btn-block text-left header-button" type="button" data-toggle="collapse" data-target="#food-collapse" aria-expanded="true" aria-controls="food-collapse">
+                        Food and Grant Committee
+                    </button>
+                </div>
+                <div class="collapse" id="food-collapse" aria-labelledby="food-header" data-parent="#members-accordion">
+                    <div class="card-body">
+                        <div class="row">
+                            {% for member in members.food %}
+                            <div class="col-10 col-sm-6 col-md-4 col-lg-4 col-xl-3 mt-3 mb-3 gallery-column">
+                                <div class="row container d-flex h-100 gallery-item">
+                                    
+                                    <img src="{{member.image}}" alt="Avatar" class="image" style="width:100%">
+                                        <div class="middle mt-3 mb-3 ml-3 mr-3">
+                                            <div class="text">
+                                                <h3>{{member.name}}</h3>
+                                                <h6>{{member.title}}</h6>
+                                            </div>
+                                        </div>
+                                </div>
+                        </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="container gallery__item--2">
-            <img src="../static/images/team%20members/Sasha.jpg" alt="Avatar" class="image" style="width:100%">
-            <div class="middle">
-                <div class="text">
-                    <h2>Sasha</h2>
-                    <h6>Executive Director</h6>
-                    <p>Bio here!!</p>
-                </div>
-            </div>
+        <div class="row justify-content-center">
+            <a href={{url_for('home')}} ><button>Back to Lobby</button></a>
         </div>
-
-        <div class="container gallery__item--3">
-            <img src="../static/images/team%20members/Jonathan.jpg" alt="Avatar" class="image" style="width:100%">
-            <div class="middle">
-                <div class="text">
-                    <h3>Johnathon</h3>
-                    <h6>DPT</h6>
-                    <p>Bio here!!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container gallery__item--4">
-            <img src="../static/images/team%20members/Sherry.jpeg" alt="Avatar" class="image" style="width:100%">
-            <div class="middle">
-                <div class="text">
-                    <h2>Sherry</h2>
-                    <h6>Speaker</h6>
-                    <p>Bio here!!</p>
-                </div>
-            </div>
-        </div>
-
 
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <script>
+        
+        $(() => {
+            let $window = $(window);
+            let $galleryCol = $(".gallery-column");
 
-    <p align="center"><a href={{url_for('home')}} ><button>Back to Lobby</button></a></p>
+            $window.resize(() => {
+                if($window.width() < 400){
+                    return $galleryCol.removeClass("col-6").addClass("col-10");
+                }
+
+                return $html.removeClass("col-10").addClass("col-10");
+            }).trigger("resize");
+        });
+    </script>
 
 </body>
 </html>
