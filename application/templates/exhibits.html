@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Exhibits</title>
-    <link rel="shortcut icon" type="image/png" href="../static/images/notext-removebg-preview.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{%extends "layout.html" %}
+{% block title %}Gallery{% endblock %}
+
+{% block head %}
+{{ super() }}
     <link rel="stylesheet" href="../static/css/exhibits.css">
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="../static/css/whole_website.css">
-</head>
-<body>
+{% endblock %}
+
+{% block content %}
 
 <div id="loader" style="width:100%;
     height:100%;
@@ -182,6 +178,4 @@
             $(".slideshow-container").show();
         });
     </script>
-</body>
-
-</html>
+{% endblock %}

@@ -1,79 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Auditorium</title>
-    <link rel="shortcut icon" type="image/png" href="../static/images/notext-removebg-preview.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <link rel="stylesheet" href="../static/css/auditorium.css">
-    <link rel="stylesheet" href="../static/css/whole_website.css">
-</head>
-<body>
+{%extends "layout.html" %}
+{% block title %}Auditorium{% endblock %}
 
+{% block head %}
+{{ super() }}
+    <link rel="stylesheet" href="../static/css/auditorium.css">
+{% endblock %}
+
+{% block content %}
 
     <img id="auditorium" src="../static/images/auditorium.png" alt="auditorium">
 <iframe class="responsive-iframe" allowfullscreen="allowfullscreen"
         src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
 
-
-<!--    <div id="bios">-->
-<!--        <div id="about_speakers">-->
-<!--            <br>-->
-<!--            <h3>More about this year's speakers:</h3>-->
-<!--            <select onLoad="showBio()" name="speaker_info" id="speaker_info"  onchange="showBio()">-->
-<!--                <option value = "heather" selected=selected>Heather</option>-->
-<!--                <option value = "giovanni">Giovanni</option>-->
-<!--                <option value = "sewoe">Sewoe</option>-->
-<!--                <option value = "esha">Esha</option>-->
-<!--                <option value = "jenevieve and julianna">Jeneviéve and Julianna</option>-->
-<!--            </select>-->
-<!--            <br><br>-->
-<!--            <h2 id="speaker_name">Heather Chandler</h2>-->
-<!--            <img id="speaker_img" src="../static/images/speakers/heather.jpg" alt="heather chandler">-->
-<!--            <br>-->
-<!--            <p id="speaker_bio">Heather Chandler's Bio</p>-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
-<!--    </div>-->
     <form style="text-align: center" action={{url_for('home')}} method="get">
         <button id="lobby_button" type="submit" class="btn btn-outline-primary">Back to
             Lobby
         </button>
     </form>
 
-<!--<script>-->
-<!--    function showBio(){-->
-<!--        console.log("showing bio");-->
-<!--        const speaker = document.getElementById("speaker_info").value-->
-<!--        const speakerName = document.getElementById("speaker_name")-->
-<!--        const speakerImg = document.getElementById("speaker_img")-->
-<!--        const speakerBio = document.getElementById("speaker_bio")-->
-<!--        if(speaker === "heather"){-->
-<!--            speakerName.innerText = "Heather Chandler";-->
-<!--            speakerBio.innerText = "Heather Chandler's Bio";-->
-<!--            speakerImg.src = "../static/images/speakers/heather.jpg";-->
-<!--        }else if(speaker === "giovanni"){-->
-<!--            speakerName.innerText = "Giovanni Marsico";-->
-<!--            speakerBio.innerText = "Giovanni Marsico's Bio";-->
-<!--            speakerImg.src = "../static/images/speakers/giovanni.jpg";-->
-<!--        }else if(speaker === "sewoe"){-->
-<!--            speakerName.innerText = "Sewoe Mortoo";-->
-<!--            speakerBio.innerText = "Sewoe Mortoo's Bio";-->
-<!--            speakerImg.src = "../static/images/placeholder.png";-->
-<!--        }else if(speaker === "esha"){-->
-<!--            speakerName.innerText = "Esha Shah";-->
-<!--            speakerBio.innerText = "Esha Shah's Bio";-->
-<!--            speakerImg.src = "../static/images/placeholder.png";-->
-<!--        }else if(speaker === "jenevieve and julianna"){-->
-<!--            speakerName.innerText = "Jeneviéve and Julianna Surkin";-->
-<!--            speakerBio.innerText = "Jeneviéve and Julianna Surkin's Bio";-->
-<!--            speakerImg.src = "../static/images/placeholder.png";-->
-<!--        }-->
-<!--    }-->
-<!--</script>-->
-
-
-
-</body>
-
-</html>
+{% endblock %}

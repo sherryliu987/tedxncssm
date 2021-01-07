@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sponsors</title>
-    <link rel="shortcut icon" type="image/png" href="../static/images/notext-removebg-preview.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <link rel="stylesheet" href="../static/css/whole_website.css">
-    <style>
+{%extends "layout.html" %}
+{% block title %}Sponsors{% endblock %}
+
+{% block head %}
+{{ super() }} <style>
         p{
             font-family: Helvetica, Sans-Serif, serif;
             color:white;
             padding-left:10%;
             padding-right:10%;
         }
+        body{
+            background-color: black;
+        }
     </style>
+{% endblock %}
 
-</head>
-<body style="background-color: black">
-
+{% block content %}
 <br>
 <p style="text-align:center; font-size:20px; font-family: Georgia,Times New Roman,Times,serif; font-style: italic">A huge thank you to all of the sponsors who made this event happen,
     and to TEDx for creating a platform for ideas worth spreading! Click to learn more about our sponsors.
@@ -46,7 +43,6 @@
         Lobby
     </button>
 </form>
+<br>
 
-
-</body>
-</html>
+{% endblock %}
