@@ -7,10 +7,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/css/exhibits.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../static/css/whole_website.css">
 </head>
 <body>
+
+<div id="loader" style="width:100%;
+    height:100%;
+    background-color: black;
+    text-align: center;
+    margin:0;">
+    <img src="../static/images/art/duke-1.gif" alt="horse">
+</div>
 
 <div class="slideshow-container">
 
@@ -173,8 +182,14 @@
         </button>
     </form>
     <br>
+    </div>
 
     <script src="../static/scripts/slideshow.js"></script>
+    <script>
+        $(window).load(function() {
+            $("#loader").fadeOut("fast");
+        });
+    </script>
 </body>
 
 </html>

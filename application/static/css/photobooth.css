@@ -48,6 +48,8 @@ h1{
     float:right;
     border: 10px solid #FF2B06;
     margin:15px;
+    width:50%;
+    height:50%;
 }
 
 video{
