@@ -11,8 +11,13 @@
     text-align:center;
 }
 
+#buttons{
+    float:left;
+}
+
 #screenshot{
     display: inline;
+    background-color: red;
 }
 
 #ted-logo{
@@ -37,10 +42,6 @@ h1{
     font-size: 100px;
     font-family: 'Allerta Stencil', serif;
     color:white;
-}
-
-span{
-    display:inline;
 }
 
 #user_photo{

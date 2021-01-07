@@ -19,18 +19,17 @@
             <img id="ted-logo" src="../static/images/photobooth%20filters/Recording.png" alt="TED logo">
         </span>
         <span><video autoplay></video></span>
-        <span
-                id="photo_with_border"><img id="user_photo" src="../static/images/Photobooth_Intro.png"
+        <span id="photo_with_border"><img id="user_photo" src="../static/images/Photobooth_Intro.png"
                                             alt="screenshot"></span>
     </span>
 
     <h1 id="countdown"><b></b></h1>
 
     <div id="buttons">
-        <button id="screenshot-button">Manual Photo</button>
-        <button id="auto_mode">Countdown!</button>
-        <button id="download">Download Image</button><br>
-        <label for="filter">Choose Filter</label>
+        <button class="btn btn-outline-primary" id="screenshot-button">Manual Photo</button>
+        <button class="btn btn-outline-primary" id="auto_mode">Countdown!</button>
+        <button class="btn btn-outline-primary" id="download">Download Image</button><br>
+        <label style="color:white" for="filter">Choose Filter</label>
         <select onLoad="setFilter()" name="filter" id="filter" onchange="setFilter()">
             <option value="Ashes" selected=selected>Recording</option>
             <option value="Logo">Thanks for Coming</option>

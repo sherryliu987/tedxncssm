@@ -25,7 +25,6 @@ autoButton.onclick = function () {
 
 //recursive function for countdown and click
 function writeNext(i, auto_num) {
-    console.log("hello" + i + " " + auto_num);
     cd.textContent = i;
     if (i === 1) {
         pressed = true;
@@ -127,7 +126,10 @@ function handleSuccess(stream) {
     video.srcObject = stream;
 }
 const constraints = {
-    video: true
+    video: {
+        width:800,
+        height:600
+    }
 };
 function startVideo() {
     navigator.mediaDevices
