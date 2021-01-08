@@ -1,4 +1,4 @@
-const countDownDate = new Date("Jan 9, 2021 8:00:00").getTime();
+const countDownDate = new Date("Jan 9, 2021 8:45:00").getTime();
 
 const x = setInterval(function () {
 
@@ -14,8 +14,8 @@ const x = setInterval(function () {
         clearInterval(x);
         document.getElementById("countdown").innerHTML = "";
         document.getElementById("countdown-message").innerHTML =
-            "The event is now live - Speaker #1 is speaking now in the auditorium. " +
-            "Please email **contact** with any questions and enjoy!"
+            "The event is now live! Check out the schedule to see today's speaker lineup - all speeches will be shown" +
+            " in the auditorium. Enjoy!"
     }else{
         document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
             + minutes + "m " + seconds + "s ";
