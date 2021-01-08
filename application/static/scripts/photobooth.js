@@ -126,12 +126,10 @@ function handleSuccess(stream) {
     video.srcObject = stream;
 }
 const constraints = {
-    video: {
-        width:800,
-        height:600
-    }
+    video: true
 };
 function startVideo() {
+    console.log("STARTING VID");
     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(handleSuccess)
