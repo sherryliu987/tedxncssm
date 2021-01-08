@@ -129,7 +129,6 @@ const constraints = {
     video: true
 };
 function startVideo() {
-    console.log("STARTING VID");
     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(handleSuccess)
