@@ -1,25 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sponsors</title>
-    <link rel="shortcut icon" type="image/png" href="../static/images/notext-removebg-preview.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/whole_website.css">
-    <style>
+{%extends "layout.html" %}
+{% block title %}Sponsors{% endblock %}
+
+{% block head %}
+{{ super() }} <style>
         p{
             font-family: Helvetica, Sans-Serif, serif;
             color:white;
             padding-left:10%;
             padding-right:10%;
         }
+        body{
+            background-color: black;
+        }
     </style>
+{% endblock %}
 
-</head>
-<body style="background-color: black">
+{% block content %}
 <br>
 <p style="text-align:center; font-size:20px; font-family: Georgia,Times New Roman,Times,serif; font-style: italic">A huge thank you to all of the sponsors who made this event happen,
-    and to TEDx for creating a platform for ideas worth sharing!</p>
+    and to TEDx for creating a platform for ideas worth spreading! Click to learn more about our sponsors.
 <div style="width:95%;margin:0 auto">
 
     <marquee>
@@ -29,8 +28,10 @@
         <img  alt="NCSSM logo" src="../static/images/sponsors/NCSSM.png" onclick=window.open("https://www.ncssm.edu/")>
         <img src="../static/images/sponsors/Fair Trade.png" alt="bull city logo"
              onclick=window.open("http://www.bullcityfairtrade.com/")>
-        <img src="../static/images/sponsors/tedx.png" alt="tedx logo"
-             onclick=window.open("http://www.bullcityfairtrade.com/") >
+        <img src="../static/images/sponsors/tedx.png" alt="TEDx"
+             onclick=window.open("https://www.ted.com/") >
+        <img src="../static/images/sponsors/Toffee.png" alt="Durham Toffee Co"
+             onclick=window.open("https://durhamtoffee.com/") >
     </marquee>
 
 
@@ -42,6 +43,6 @@
         Lobby
     </button>
 </form>
+<br>
 
-</body>
-</html>
+{% endblock %}

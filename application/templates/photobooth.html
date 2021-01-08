@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Photobooth</title>
+    <title>Photobooth - TEDxYouth@NCSSM</title>
     <link rel="shortcut icon" type="image/png" href="../static/images/notext-removebg-preview.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../static/css/photobooth.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="../static/css/whole_website.css">
 </head>
@@ -19,18 +20,19 @@
             <img id="ted-logo" src="../static/images/photobooth%20filters/Recording.png" alt="TED logo">
         </span>
         <span><video autoplay></video></span>
-        <span
-                id="photo_with_border"><img id="user_photo" src="../static/images/Photobooth_Intro.png"
+        <span id="photo_with_border"><img id="user_photo" src="../static/images/Photobooth_Intro.png"
                                             alt="screenshot"></span>
     </span>
 
     <h1 id="countdown"><b></b></h1>
 
     <div id="buttons">
-        <button id="screenshot-button">Manual Photo</button>
-        <button id="auto_mode">Countdown!</button>
-        <button id="download">Download Image</button><br>
-        <label for="filter">Choose Filter</label>
+        <div class="btn-toolbar text-center well">
+        <button style="margin-right:10px;" class="btn btn-outline-primary" id="screenshot-button">Manual Photo</button>
+        <button  style="margin-right:10px;"class="btn btn-outline-primary" id="auto_mode">Countdown!</button>
+        <button  style="margin-right:10px;"class="btn btn-outline-primary" id="download">Download Image</button><br>
+        </div><br>
+            <label style="color:white" for="filter">Choose Filter:</label>
         <select onLoad="setFilter()" name="filter" id="filter" onchange="setFilter()">
             <option value="Ashes" selected=selected>Recording</option>
             <option value="Logo">Thanks for Coming</option>
@@ -48,6 +50,7 @@
 </form>
 
 <script src="../static/scripts/photobooth.js"> </script>
+
 
 </body>
 </html>

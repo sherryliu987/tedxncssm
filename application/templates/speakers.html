@@ -1,17 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Meet the Speakers</title>
-    <link rel="shortcut icon" type="image/png" href="../static/images/notext-removebg-preview.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/whole_website.css">
-</head>
-<body>
+{%extends "layout.html" %}
+{% block title %}Speakers{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="../static/css/speakers.css">
+
+    <title>Speakers</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="row justify-content-center heading">
+        <h1>Meet our Speakers!</h1>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-6 col-xl-5">
+            <div id="speakersCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#speakersCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#speakersCarousel" data-slide-to="1"></li>
+                  <li data-target="#speakersCarousel" data-slide-to="2"></li>
+                  <li data-target="#speakersCarousel" data-slide-to="3"></li>
+                  <li data-target="#speakersCarousel" data-slide-to="4"></li>
+                  <li data-target="#speakersCarousel" data-slide-to="5"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="#esha"><img src="../static/images/speakers/esha.png" class="d-block w-100" alt="Graphic of Esha Shah"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#sewoe"><img src="../static/images/speakers/sewoe.png" class="d-block w-100" alt="Graphic of Sewoe Mortoo"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#jenevieve"><img src="../static/images/speakers/jenevieve.png" class="d-block w-100" alt="Graphic of Jenevieve Surkin"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#julianna"><img src="../static/images/speakers/julianna.png" class="d-block w-100" alt="Graphic of Julianna Surkin"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#heather"><img src="../static/images/speakers/heather_graphic.png" class="d-block w-100" alt="Graphic of Heather Chandler"></a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="#giovanni"><img src="../static/images/speakers/gio.png" class="d-block w-100" alt="Graphic of Giovanni Marsico"></a>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#speakersCarousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#speakersCarousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+        </div>
+    </div>
+    <div class="row justify-content-center heading">
+        <h1>Speaker Biographies</h1>
+    </div>
+    <div class="row speaker" id="esha">
+        <div class="image col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 my-auto">
+            <img src="../static/images/speakers/esha_nobackground.png" style="width:100%">
+        </div>
+        <div class="bio col-12 col-sm-6 col-md-6 col-lg-8 col-xl-9 my-auto">
+            <h5>Esha Shah</h5>
+            <p>a student at the North Carolina School of Science and Mathematics in Durham, NC, narrates her journey of self-acceptance through body image, spreading her message to not only teenagers, but everyone out there who is looking for a glorious improvement. Esha is a junior at NCSSM, and a previous attendee of Lake Norman High School in her hometown of Mooresville, North Carolina. In her spare time, she enjoys YA novels, world travel, swimming, and wrestling. In the future, Esha hopes to pursue studies in neuroscience, focusing on neurodegenerative disorders and diseases and traumatic brain injuries. However, she also seeks to explore her interest in self-confidence and self-motivation. It is her belief that every person should feel good about themselves, and not let their self-consciousness stop them from pursuing their dreams.</p>
+        </div>
+    </div>
+    <div class="row speaker light-speaker" id="sewoe">
+        <div class="image col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 my-auto">
+            <img src="../static/images/speakers/sewoe_nobackground.png" style="width:100%">
+        </div>
+        <div class="bio col-12 col-sm-6 col-md-6 col-lg-8 col-xl-9 my-auto">
+            <h5 style="color:black">Sewoe Mortoo</h5>
+            <p style="color:black">a student at the North Carolina School of Science and Mathematics in Durham, NC, weaves a story of her family’s experiences with labels throughout their lives, exploring the relationship that many first-generation children have with their ancestry. Sewoe is a junior at NCSSM, and a previous attendee of South Iredell High School in her hometown of Mooresville, North Carolina. In her spare time, she sings, bakes, and creates visual arts works. She is considering pursuing a future career as a civil rights lawyer. She also hopes to continue exploring her new interest in speaking about her experiences with labels. Sewoe advocates for the respect of people’s identities and heritage regardless of one’s personal experience of it; she wishes that everyone can learn about who they meet before they craft a stereotype.</p>
+        </div>
+    </div>
+    <div class="row speaker" id="jenevieve">
+        <div class="image col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 my-auto">
+            <img src="../static/images/speakers/jenevieve_nobackground.png" style="width:100%">
+        </div>
+        <div class="bio col-12 col-sm-6 col-md-6 col-lg-8 col-xl-9 my-auto">
+            <h5>Jenevieve Surkin</h5>
+            <p>is a sophomore at the University of North Carolina at Chapel Hill where she is exploring her love of Mandarin and majoring in biomedical engineering (BME) through the joint program between UNC and NC State. She is an alumni of the North Carolina School of Science and Math online program where she discovered her insatiable curiosity for the unknown. Conflict and compromise has been a part of human nature that has perpetually fascinated and perplexed Jenevieve on both a global and personal level. She strives to understand everyone and everything, to embrace differences in perspective and experience and learn from others. Her favorite area in BME thus far is neuroprosthetics, but she is also very interested in other areas of wearable tech, especially in Anouk Wipprecht’s fashion technology work on an ADHD detection headband, otherwise known as "Magical Unicorn Horn," to diagnose and provide a more specialized treatment plan for people with ADHD. Jenevieve has been learning Mandarin since she was six years old and her love of the language has led her to discover biomedical engineering in a global health setting where the counterintuitive competitive nature of science hinders its accessibility and progress. In her free time, Jenevieve is also a major dog-lover, trekkie, chocolate connoisseur, aspiring poet, avid reader, and robotics fanatic.</p>
+        </div>
+    </div>
+    <div class="row speaker light-speaker" id="julianna">
+        <div class="image col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 my-auto">
+            <img src="../static/images/speakers/julianna_nobackground.png" style="width:100%">
+        </div>
+        <div class="bio col-12 col-sm-6 col-md-6 col-lg-8 col-xl-9 my-auto">
+            <h5 style="color:black">Julianna Surkin</h5>
+            <p style="color:black">graduated from NCSSM’s online program in the class of 2019 and is now an Honors student at UNC Chapel Hill studying computer science, cognitive science and studio arts. She has managed projects that intersect in the technological, business, artistic and medical spheres while navigating the complexities and idiosyncrasies that each provides. Julianna is currently exploring applications of human-computer interaction in order to make everyday use of technology more intuitive for everyone.</p>
+            <p style="color:black">The first TED event she attended was the 2018 TEDxYouth @NCSSM when the theme that year was growth. She was incredibly inspired by the speakers’ experiences, the audience’s discussions and the organizers’ dedication to bringing the spirit of TED to the NCSSM and NC community. For this year’s TEDxYouth@NCSSM event, she finds that these attributes have only grown to surpass the challenges of 2020 and the potential for greatness in 2021.</p>
+        </div>
+    </div><div class="row speaker" id="heather">
+        <div class="image col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 my-auto">
+            <img src="../static/images/speakers/heather_nobackground.png" style="width:100%">
+        </div>
+        <div class="bio col-12 col-sm-6 col-md-6 col-lg-8 col-xl-9 my-auto">
+            <h5>Heather Chandler</h5>
+            <p>is a video game producer with 25 years and counting under her belt in the game industry. She’s led teams at Epic Games, Electronic Arts, Ubisoft, and Activision. She’s launched over 40 games across all gaming platforms and has worked on popular franchises including Fortnite, Star Trek, and Ghost Recon. Heather is currently working on a game about the ocean called Beyond Blue. She also combined her passion for team building and games to start an escape room called Whole Brain Escape in her hometown of Apex, NC! She is a strong advocate for STEM education and committed to providing opportunities to students of all ages to get involved with technology.</p>
+        </div>
+    </div>
+    <div class="row speaker light-speaker" id="giovanni">
+        <div class="image col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 my-auto">
+            <img src="../static/images/speakers/gio_nobackground.png" style="width:100%">
+        </div>
+        <div class="bio col-12 col-sm-6 col-md-6 col-lg-8 col-xl-9 my-auto">
+            <h5 style="color:black">Giovanni Marsico</h5>
+            <p style="color:black"> is the founder of Archangel - a membership organization that helps Dreamers become Changemakers so they can make a bigger livelihood by making an even bigger impact.  He is also an Emmy® award winning producer of the film DREAMER.</p>
+        </div>
+    </div>
+</div>
+<br>
 <form style="text-align: center" action={{url_for('home')}} method="get">
     <button type="submit" class="btn btn-outline-primary">Back to
         Lobby
     </button>
 </form>
-</body>
-</html>
+<br>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+{% endblock %}

@@ -11,8 +11,13 @@
     text-align:center;
 }
 
+#buttons{
+    float:left;
+}
+
 #screenshot{
     display: inline;
+    background-color: red;
 }
 
 #ted-logo{
@@ -39,14 +44,12 @@ h1{
     color:white;
 }
 
-span{
-    display:inline;
-}
-
 #user_photo{
     float:right;
     border: 10px solid #FF2B06;
     margin:15px;
+    width:50%;
+    height:50%;
 }
 
 video{

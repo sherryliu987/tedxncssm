@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About</title>
-    <link rel="shortcut icon" type="image/png" href="../static/images/notext-removebg-preview.png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/about.css">
-    <link rel="stylesheet" href="../static/css/whole_website.css">
-</head>
-<body>
+{%extends "layout.html" %}
+{% block title %}About{% endblock %}
 
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="../static/css/about.css">
+{% endblock %}
+
+{% block content %}
 
     <img id="logo" src="../static/images/whitetext.png">
     <h1>Saturday, January 9 2021</h1>
@@ -37,13 +34,13 @@
         can
         expect.
     </p>
-        <img id="tedx" style="float:left; margin-left:10px;max-width:100%;" src="../static/images/lolllll.png"
+        <img class="tedx" style="float:left; margin-left:10px;max-width:100%;" src="../static/images/lolllll.png"
              alt="our logo">
     </div>
     <h1>About TEDx</h1>
     <div style = "display:flex">
     <p>TEDx is a grassroots initiative, created in the spirit of TED’s overall mission to research and discover “ideas worth spreading.” TEDx brings the spirit of TED to local communities around the globe through TEDx events. These events are organized by passionate individuals who seek to uncover new ideas and to share the latest research in their local areas that spark conversations in their communities. TEDx events include live speakers and recorded TED Talks, and are organized independently under a free license granted by TED. These events are not controlled by TED, but event organizers agree to abide by our format, and are offered guidelines for curation, speaker coaching, event organizing and more. They learn from us and from each other. More than 3000 events are now held annually.</p>
-        <img id="tedx" style="float:left; margin-left:10px;max-width:100%;" src="../static/images/TEDx_LOGO.png"
+        <img class="tedx" style="float:left; margin-left:10px;max-width:100%;" src="../static/images/TEDx_LOGO.png"
             alt="ted logo">
     </div>
     
@@ -52,6 +49,4 @@
             Lobby
         </button>
     </form>
-
-</body>
-</html>
+{% endblock %}
