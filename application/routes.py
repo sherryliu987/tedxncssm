@@ -22,99 +22,127 @@ def exhibits():
 @app.route("/committee")
 def committee():
     members = {"dpt":[{
-        "name": "Sree",
+        "name": "Michelle",
         "title": "DPT",
-        "image": "../static/images/team%20members/Sree.jpeg"
-    },{
-        "name": "Jonathan",
+        "image": "../static/images/team%20members/michelle.jpg"
+    },
+    {
+        "name": "Rachel",
         "title": "DPT",
-        "image": "../static/images/team%20members/Jonathan.jpg"
-    },{
-        "name": "Chloe",
+        "image": "../static/images/team%20members/rachel.jpg"
+    },
+    {
+        "name": "Saahil",
         "title": "DPT",
-        "image": "../static/images/team%20members/Chloe.png"
+        "image": "../static/images/team%20members/saahil.jpg"
     }], "exec": [{
-        "name": "Sasha",
+        "name": "Sree",
         "title": "Executive Chair",
-        "bio": "I love TEDx because it gives me the opportunity to spread ideas to a wide audience, as well as learn how to organize such a large and important event!",
-        "image": "../static/images/team%20members/Sasha.jpg"
-    },{
-        "name": "Sriya",
-        "title": "Vice Chair",
-        "image": "../static/images/team%20members/Sriya.png"
-    },{
-        "name": "Emily",
-        "title": "DPT Chair",
-        "image": "../static/images/team%20members/Emily.png"
-    },{
-        "name": "Bettie",
-        "title": "Speaker Chair",
-        "image": "../static/images/team%20members/Bettie.png"
-    },{
-        "name": "Rindha",
-        "title": "Speaker Chair",
-        "image": "../static/images/team%20members/Rindha.png"
-    },{
-        "name": "Esha",
-        "title": "Speaker Chair",
-        "image": "../static/images/team%20members/Esha.png"
-    },{
-        "name": "Colleen",
-        "title": "Food/Grant Chair",
-        "image": "../static/images/team%20members/Colleen.png"
-    },{
-        "name": "Nina N.",
-        "title": "Food/Grant Chair",
-        "image": "../static/images/team%20members/Nina_N.png"
-    },{
-        "name": "Nina Z.",
-        "title": "Audience Chair",
-        "image": "../static/images/team%20members/Nina_Z.png"
-    },{
-        "name": "Annamarie",
-        "title": "Audience Chair",
-        "image": "../static/images/team%20members/Annamarie.png"
-    }], "speaker": [{
+        "image": "../static/images/team%20members/sree.jpg"
+    },
+    {
         "name": "Sherry",
-        "title": "Speaker",
-        "image": "../static/images/team%20members/Sherry.jpeg"
-    },{
-        "name": "Ella",
-        "title": "Speaker",
-        "image": "../static/images/team%20members/Ella.png"
-    },{
-        "name": "Rebekah",
-        "title": "Speaker",
-        "image": "../static/images/team%20members/Rebekah.png"
-    },{
-        "name": "Anushka",
-        "title": "Speaker",
-        "image": "../static/images/team%20members/Anushka.png"
-    }], "food": [{
-        "name": "Ryleigh",
-        "title": "Food/Grant",
-        "image": "../static/images/team%20members/Ryleigh.png"
-    },{
-        "name": "Samya",
-        "title": "Food/Grant",
-        "image": "../static/images/team%20members/Samya.png"
-    },{
-        "name": "Chris",
-        "title": "Food/Grant",
-        "image": "../static/images/team%20members/Chris.png"
-    },{
-        "name": "Alan",
-        "title": "Food/Grant",
-        "image": "../static/images/team%20members/Alan.png"
-    }], "audience": [{
-        "name": "Gavin",
+        "title": "Executive Chair",
+        "image": "../static/images/team%20members/sherry.jpg"
+    },
+    {
+        "name": "Annie",
+        "title": "Audience Lead",
+        "image": "../static/images/team%20members/annie.jpg"
+    },
+    {
+        "name": "Mariah",
+        "title": "Audience Lead",
+        "image": "../static/images/team%20members/mariah.jpg"
+    },
+    {
+        "name": "Jonathan",
+        "title": "DPT Lead",
+        "image": "../static/images/team%20members/johnathon.jpg"
+    },
+    {
+        "name": "Chloe",
+        "title": "DPT Lead",
+        "image": "../static/images/team%20members/chloe.jpg"
+    },
+        {
+            "name": "Alan",
+            "title": "Food/Grant Lead",
+            "image": "../static/images/team%20members/alan.jpg"
+        },
+        {
+            "name": "Ryleigh",
+            "title": "Food/Grant Lead",
+            "image": "../static/images/team%20members/ryleigh.jpg"
+        },
+        {
+            "name": "Ella",
+            "title": "Speaker Lead",
+            "image": "../static/images/team%20members/ella.jpg"
+        },
+        {
+            "name": "Esha",
+            "title": "Speaker Lead",
+            "image": "../static/images/team%20members/esha.jpg"
+        },
+        {
+            "name": "Rebekah",
+            "title": "Speaker Lead",
+            "image": "../static/images/team%20members/rebekah.jpg"
+        },
+        {
+            "name": "Sewoe",
+            "title": "Speaker Lead",
+            "image": "../static/images/team%20members/sewoe.jpg"
+        }], "speaker": [
+        {
+            "name": "Ivan",
+            "title": "Speaker",
+            "image": "../static/images/team%20members/ivan.jpg"
+        },
+        {
+            "name": "Sophia D.",
+            "title": "Speaker",
+            "image": "../static/images/team%20members/sophia d.jpg"
+        },
+        {
+            "name": "Sophia S.",
+            "title": "Speaker",
+            "image": "../static/images/team%20members/sophia s.jpg"
+        }
+    ], "food": [
+        {
+            "name": "Abigail",
+            "title": "Food/Grant",
+            "image": "../static/images/team%20members/abigail.jpg"
+        },
+        {
+            "name": "Akhil",
+            "title": "Food/Grant",
+            "image": "../static/images/team%20members/akhil.jpg"
+        },
+        {
+            "name": "Jonathan",
+            "title": "Food/Grant",
+            "image": "../static/images/team%20members/jonathan.jpg"
+        }
+    ], "audience": [
+    {
+        "name": "Eliza",
         "title": "Audience",
-        "image": "../static/images/team%20members/Gavin.png"
-    },{
-        "name": "Isaac",
+        "image": "../static/images/team%20members/eliza.jpg"
+    },
+    {
+        "name": "Eric",
         "title": "Audience",
-        "image": "../static/images/team%20members/Isaac.png"
-    }]}
+        "image": "../static/images/team%20members/eric.jpg"
+    },
+    {
+        "name": "Maddie",
+        "title": "Audience",
+        "image": "../static/images/team%20members/maddie.JPG"
+    }
+    ]}
 
     return render_template("committee.html", members=members)
 
