@@ -1,0 +1,97 @@
+{%extends "layout.html" %}
+{% block title %}Gallery{% endblock %}
+
+{% block head %}
+{{ super() }}
+    <link rel="stylesheet" href="../static/css/exhibits.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% endblock %}
+
+{% block content %}
+
+<div id="loader" style="width:100%;
+    height:100%;
+    background-color: black;
+    text-align: center;
+    margin:0;">
+    <img src="../static/images/art/duke-1.gif" alt="horse">
+</div>
+
+<div class="slideshow-container" style="display:none">
+
+    <div class="mySlides">
+        <img id="art1" src="../static/images/art/mac.png" alt="sample art">
+        <br><br>
+        <div class="descr1"><b>First Place: "A Walk in Their Shoes" by Mac Barnes</b>
+            <br><br>
+            <p>Mac Description</p>
+        </div>
+    </div>
+
+
+    <div class="mySlides">
+        <audio class="music" controls>
+            <source src="../static/audio/ozi.mp3" type="audio/mp3">
+        </audio>
+
+        <div class="descr1"><br>
+        <div><b>First Place: "April, 2020" by Ozioma Obi</b></div>
+            <br>
+            <p> Ozi Description
+            </p></div>
+    </div>
+
+    <div class="mySlides">
+        <img id="art2" src="../static/images/art/vyshu.png" alt="sample art">
+        <br><br>
+        <div class="descr1"><b>Runner Up: by Vyshu Sabbi</b>
+            <br><br>
+            <p>Vyshu Description</div>
+    </div>
+
+    <div class="mySlides">
+        <audio class="music" controls>
+            <source src="../static/audio/Rise.mp3" type="audio/mp3">
+        </audio><br>
+        <div class="descr1"><div><b>Runner Up: "Lands Beyond" by Jolie Duquene</b> </div>
+            <br><p>Jolie Description  </p></div>
+    </div>
+
+    </div>
+
+
+    <div class="w3-center">
+        <button class="btn btn-outline-primary" onclick="plusDivs(-1)">&#10094; Prev</button>
+        <button class="btn btn-outline-primary" onclick="plusDivs(1)">Next &#10095;</button>
+        <br><br>
+        <span>Art</span>
+        <button class="btn btn-outline-primary" onclick="currentDiv(1)">1</button>
+        <button class="btn btn-outline-primary" onclick="currentDiv(3)">2</button>
+        <button class="btn btn-outline-primary" onclick="currentDiv(5)">3</button>
+        <button class="btn btn-outline-primary" onclick="currentDiv(7)">4</button>
+        <button class="btn btn-outline-primary" onclick="currentDiv(9)">5</button>
+        <span>Music</span>
+        <button class="btn btn-outline-primary" onclick="currentDiv(2)">1</button>
+        <button class="btn btn-outline-primary" onclick="currentDiv(4)">2</button>
+        <button class="btn btn-outline-primary" onclick="currentDiv(6)">3</button>
+        <button class="btn btn-outline-primary" onclick="currentDiv(8)">4</button>
+        <button class="btn btn-outline-primary"onclick="currentDiv(10)">5</button>
+    </div>
+    <br>
+
+    <form style="text-align: center" action={{url_for('home')}} method="get">
+        <button type="submit" class="btn btn-outline-primary">Back to
+            Lobby
+        </button>
+    </form>
+    <br>
+    </div>
+
+    <script src="../static/scripts/slideshow.js"></script>
+    <script>
+        $(window).load(function() {
+            $("#loader").fadeOut("fast");
+            $(".slideshow-container").show();
+        });
+    </script>
+{% endblock %}

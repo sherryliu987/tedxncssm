@@ -3,95 +3,514 @@
 
 {% block head %}
 {{ super() }}
-    <link rel="stylesheet" href="../static/css/exhibits.css">
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../static/css/exhibits.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<style>
+    h1{
+        text-align:left;
+        font-family: Georgia,Times New Roman,Times,serif;
+        font-style: italic;
+        color: white;
+        padding: 0.5em 1em;
+        margin-bottom: 1em;
+        border-bottom: 0.3em solid #FF0000;
+    }
+    body{
+        text-align:left;
+        font-family: Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
+        width:70%;
+        color: white;
+
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:20px;
+        margin-bottom:20px;
+
+        background-color: black;
+    }
+</style>
+
 {% endblock %}
 
 {% block content %}
+<div class="container my-4">
 
-<div id="loader" style="width:100%;
-    height:100%;
-    background-color: black;
-    text-align: center;
-    margin:0;">
-    <img src="../static/images/art/duke-1.gif" alt="horse">
+    <!-- Grid row -->
+    <div class="row">
+
+        <!-- TS -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div>
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/13%20-%20T.S.jpg">
+                                <h1 style="color:black">First Place Art: "T.S. 03/02/2021" by Mac Barnes</h1>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b> Just like this pandemic,
+                                    each individual within “A Walk in Their Shoes” never expected to experience the homophobia, transphobia, racism, sexual/domestic assault, or natural disasters that they did. With each life event occurring, they walked into uncharted territory, often scared or fearful of the unknown. However, their resulting triumph from their tragedy is powerful, and the stories and lessons they exude as a result make us as an audience feel armored knowing we are not alone in navigating the trying terrains of our own uncharted territories. Hoping to show, using fabric, what life is like through their eyes, ideally, these narratives will leave each audience member with a newfound understanding of others' journeys, such that they can become the compassionate humans we need during the difficult conversations that propel us to new peaks of social equity.
+                                <br><br><b>Juror Remarks:</b>  Throughout the pandemic, Mac Barnes has explored new
+                                    methods to expand the territory of his artistic discipline.Just as Mr. Barnes broke tradition by burning the edges of this piece, we too might need to set fire to our own biases to become aware of their existence. If we can learn to value and celebrate unique identities within our society, we may be able to stitch together a new and better tomorrow.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/13%20-%20T.S%20-%20square.jpg" alt="video"
+                    data-toggle="modal" data-target="#modal1"></a>
+        </div>
+        <!-- TS -->
+
+        <!-- April 2020 -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div style="padding:10px">
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/2%20-%20april.jpg">
+                                <h1 style="color:black">First Place Music: "april, 2020" by Ozioma Obi</h1>
+                                <audio class="music" controls>
+                                    <source src="../static/audio/ozi.mp3" type="audio/mp3">
+                                </audio>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b>   My piece "April, 2020," is a musical representation of all my thoughts and emotions throughout the titular month. I attempted to create a "happy" piece by centering my theme around my coping mechanisms counteracting quickly rising pandemic. The F major section  represents all of the distraction methods during the pandemic, as well as the outside spring weather. The D minor section is meant to convey the growing COVID-19 pandemic and all of its associated anxiety. I chose to use a pizzicato violin and a marimba in my piece to give my piece a spacious and "empty" feeling, representing the loneliness most people felt at the start of the pandemic.
+                                <br><br><b>Juror Remarks: </b>Instrumental piece, accessible melody, Interesting
+                                    two part harmonies, clear cadences, interesting development, potential for live performance if desired, I like the addition of the violin voice late in the piece.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/2%20-%20april.jpg" alt="video"
+                    data-toggle="modal" data-target="#modal2"></a>
+        </div>
+        <!-- April 2020 -->
+
+        <!-- Foggy State -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div>
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/2%20-%20Some%20Foggy%20State%20of%20Mind%20-%20Vyshu%20Sabbi.jpg">
+                                <h1 style="color:black">Runner Up Art: "Some Foggy State of Mind" by Vyshu Sabbi</h1>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b>   “This piece had three beginnings. One was a poem written by my last-year self, the second was a months-late final project, and the third was a spontaneous chalk drawing in a Beall classroom late at night. This chalk drawing brought me straight to the art studio the next day to begin on this more-than-five-foot-long painting. Not only was the process a series of adventures, but the imagery in the piece is of the uncharted depths of my mind, from the uncharted depths of my mind.”
+                                <br><br>
+                               <b>Juror Remarks: </b> In describing her artistic process, Vyshu shows how a committed artist can bring three disparate experiences together to create a landscape painting that gives us permission to dream, rest our anxious minds, and awake to “new beginnings.” Uncharted areas are places not yet mapped or surveyed. This landscape painting is a literal representation of this year’s theme. Finally: is there any territory more uncharted than the mind?</p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/2%20-%20Some%20Foggy%20State%20of%20Mind%20-%20square.jpg" alt="video"
+                    data-toggle="modal" data-target="#modal3"></a>
+        </div>
+        <!-- Foggy State-->
+    </div>
+    <div class="row">
+        <!-- Lands Beyond -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div style="padding:10px">
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/1%20-%20lands%20beyond.jpg">
+                                <h1 style="color:black">Runner Up Music: "Lands Beyond" by Jolie Duquene</h1>
+                                <audio class="music" controls>
+                                    <source src="../static/audio/jolie.mp3" type="audio/mp3">
+                                </audio>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b>   Imagine a river, the river of life. You don't know where it will lead you, you can't see what's next. Hear the surprises, the confusions, the joys, everything that makes up our life experiences. But wait-- don't forget to phone a friend, to share the experience together. Then again, stuck at home during Covid, alone we feel, watching the lights go out. Once again, we bravely step out and embark on the journeys of life.
+
+                               <br><br><b>Juror Remarks: </b> Very interesting instrumental piece.  Employs
+                                    dissonance and pentatonic sounds. Love the use of extended techniques.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/1%20-%20lands%20beyond.jpg" alt="video"
+                    data-toggle="modal" data-target="#modal4"></a>
+        </div>
+        <!-- Lands Beyond -->
+
+        <!-- Jessica -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div>
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/3%20-%20jessica.PNG">
+                                <h1 style="color:black">"1988" by Jessica Fan</h1>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b> This painting depicts my mom in her home country China in the year 1988. At that time, because of the impact of the second World War and the latter part of the Communist  Reformation, China lagged behind in industrialization and modernity. However, just 11 years before, the gaokao examinations were reinstated and the "sleeping giant" began to wake. My mother was then 18, a budding youth. In her eyes, and the eyes of those alike her, you could see a willingness to accept change (as seen by the motorcycle in the forefront in contrast to the bicycles in the background) and a hope for the new future. It was the youth that carried the old into the new world and it will be the youth that carries us into the next.   <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/3%20-%20jessica%20-%20square.png" alt="video"
+                    data-toggle="modal" data-target="#modal5"></a>
+        </div>
+        <!-- Jessica -->
+
+        <!-- EB -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div>
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/4%20-%20E.B.jpg">
+                                <h1 style="color:black">"E.B. 07/24/2021" by Mac Barnes</h1>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b>  E.B. has the loudest quiet strength of anyone I have ever met. E.B. felt represented by the Japanese pottery technique of Kintsugi involving the deliberate smashing of an in-tact piece, only to put it back together with gold. With this in mind, Sam Fender's words - clinging tight to E.B. 's face and embroidered in her own handwriting - take on a whole new meaning:  “I was far too scared to hit him, but I would hit him in a heartbeat now”. Sexual assualt and domestic violence may have once shattered E.B. but personal strength, determination, and faith mended these breaks with time. More than a passage of time though, E.B.’s gold represents a shift in attitude and the gained strength she never knew she had. Determined to look to the light of a brighter future, E.B. shows that even in the darkest of times, there is always a glimmer of hope.. even if it is only from within our past moments of temporary brokenness. My goal with this piece is to bring to light how prevalent sexual assualt and domestic violence are. These are often traumatic events that no one talks about due to shame and embarrassment. My hope is that this piece helps other survivors see themselves in E.B. and that their breaks will mend.  <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/4%20-%20E.B%20-%20square.jpg" alt="video"
+                    data-toggle="modal" data-target="#modal6"></a>
+        </div>
+        <!-- EB -->
+    </div>
+
+    <div class="row">
+
+        <!-- H.T -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div>
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/5%20-%20H.T.jpg">
+                                <h1 style="color:black">"H.T. 02/23/2021" by Mac Barnes</h1>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b>  Coming of age tells a different story for all of us. For H.T. It means taking away the mask and makeup of the play-pretend world he grew up in and stepping into his own skin, comfortable with the fluidity of understanding one’s own sexuality. His past isn’t forever lost though as he moves from light to dark - as the built-up wall of childish shapes become cast in the shadows, we are carried through to the other side with the audibly bright piano tones symbolic of the rise to a newfound sense of balance and golden maturity. Some things never change. Not strictly dichotomous, the chronological cracks in the pavement engender the nuanced emotions, hardship, and power of self-reinvention. Nevertheless wary of falling through the cracks, he who dares to let the daunting unknown come over them stand to move forward in the path to their true authentic selves.
+                                    The goal of this piece is to encourage others that they are not alone and that even though they may live in a place or in a home where they cannot come into the light, there is hope of another side. I have seen this first hand in my own coming out experience as well as those in my community. Hope will always overcome hurt and this piece aims to demonstrate that to all of those who see it and it encourages those who feel like there is nothing but darkness ahead of them.  <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/5%20-%20H.T%20-%20square.jpg" alt="video"
+                    data-toggle="modal" data-target="#modal7"></a>
+        </div>
+        <!-- HT -->
+
+        <!-- Glitch -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div>
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/7%20-%20glitch.jpg">
+                                <h1 style="color:black">"Glitching Universe" by Celeste Reid</h1>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b> I made this piece last year as an abstract painting experiment with analogous colors. My initial goal wasn’t to have it look like space, but rather just to see what came of experimentation with a couple shapes and limited color. At first I thought it might be a red tinted ocean with bubbles. In the end, however, it seemed quite similar to a galaxy, so I played into the theme. My whole process was through waters that were “Uncharted” and undefined by me, at the time. I still think the painting could be whatever you see in it. But I think when it comes to things uncharted, both space and the ocean, which were apart of my own experience with this painting, are vast and hold many secrets.    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/7%20-%20glitch%20-%20square.jpg" alt="video"
+                    data-toggle="modal" data-target="#modal8"></a>
+        </div>
+        <!-- Glitch-->
+
+        <!-- NH -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div>
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/8%20-%20N.H..jpg">
+                                <h1 style="color:black">"N.H.  11/11/2021" by Mac Barnes</h1>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b>N.H. grew up in a rural village in Mexico and immigrated to the United States when he was 14. While this was his first major move, N.H. had been fascinated with travel since he was a child; however, the dirt roads he grew up on in Mexico had limited both accessibility and travel in more ways than he knew. While his dreams were just that when he was a child, he aspired to make those dreams a reality in the United States. N.H. went to school to become a civil engineer to further accessibility in his community– his current project is building a pedestrian bridge in Charlotte, North Carolina. N.H. experienced barriers throughout his entire life, first being accessibility in Mexico, and language and racial ones coming later after his move to the United States. Despite this, N.H. has dedicated his life to building tangible bridges as well as cultural bridges between his identity in the United States and the one he still holds from Mexico.
+                                    This piece is so important because immigration is a topic that everyone seems to have an opinion about. We often hear on the news about all of the  crises happening with immigration. No one talks about the positive stories. My goal is to tell the amazing story of N.H. and the many thousands of immigrants to our country who have become U.S. citizens and bring so many amazing talents that benefit our communities.    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/8%20-%20N.H.%20-%20square.jpg" alt="video"
+                    data-toggle="modal" data-target="#modal9"></a>
+        </div>
+        <!-- NH -->
+    </div>
+
+    <div class="row">
+        <!-- Churning -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div>
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/9%20-%20Churning.jpg">
+                                <h1 style="color:black">"Churning" by Vyshu Sabbi</h1>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b>  Churning was a piece that slowly formulated in my head until 1 am one day, when I immediately rose from my bed at home to create it. I can't describe the feeling in a different way than this painting. It reminds me of being situated at the center of a storm, looking out at a small cliff jutting out of the waves somewhat far away. I also see koi fish or dry martian soil creeping into a once luscious environment. This piece displays an image of what I believe "uncharted" looks like.   <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/9%20-%20Churning%20-%20square.jpg" alt="video"
+                    data-toggle="modal" data-target="#modal10"></a>
+        </div>
+        <!-- Churning -->
+
+        <!-- TA -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div>
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/10%20-%20T.A..jpg">
+                                <h1 style="color:black">"T.A. 11/26/2021" by Mac Barnes</h1>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b>  T.A. grew up in a wealthy upper-class family in Nigeria. Her father was the local king of their region in Nigeria. T.A. went to boarding school, often visited Europe, and enjoyed her childhood and involvement in her community, despite her parents making a majority of her decisions. However, since T.A. moved to NC, life has not always been that of a royal princess. Successful and hardworking, T.A. and her husband opened a medical practice in Charlotte. Despite T.A.’s unbounded generosity towards others and an obvious good-hearted nature, this wasn’t enough to exempt her and her family from racially motivated malicious acts. Racial slurs were spray-painted on her driveway one evening in July 2017. However, despite it being on the news, with neighbors shocked and slightly in fear of who would do such a thing, T.A. simply left it on her concrete driveway. There it sat for months until the rain finally eroded it away. Confident in herself and her identity, T.A. was not going to live in fear of another person’s prejudice. It sent a clear message to others: However, T.A.’s message was not … it was “with God all things are possible.”
+                                    You don’t have to believe in God or even religion to embody and admire the confidence, benevolence, and boldness of T.A. much like racism and other forms of hatred in this country, it stains our pavement. Whether we chose to leave it there like T.A. or clean it off makes a difference. T.A. teaches us that we must listen to whatever faith guides us and not be deterred by mal intention of others.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/10%20-%20T.A.%20-%20square.jpg" alt="video"
+                    data-toggle="modal" data-target="#modal11"></a>
+        </div>
+        <!--TA-->
+
+        <!-- Psyche Zora 12 -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div>
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/12%20-%20Zora.JPG">
+                                <h1 style="color:black">"Psyche" by Zorabella Adrignola</h1>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b>  This is an acrylic painting of Psyche, who in Greek mythology faced many challenges and  trials, which earned her the position of goddess of the soul.   <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/12%20-%20Zora%20-%20square.jpg" alt="video"
+                    data-toggle="modal" data-target="#modal12"></a>
+        </div>
+        <!--Psyche Zora 12-->
+
+        </div>
+    <div class="row">
+        <!-- Persephone Zora 11 -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div>
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/11%20-%20Zora.jpg">
+                                <h1 style="color:black">"Persephone" by Zorabella Adrignola</h1>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b>  A painting of Persephone from Greek Mythology, who was taken to the underworld to marry Hades. She had to figure out how to live there and cope with a new life. The painting shows her being surrounded by earth and flowers.   <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/11%20-%20Zora%20-%20square.jpg" alt="video"
+                    data-toggle="modal" data-target="#modal13"></a>
+        </div>
+        <!--Persephone Zora 11-->
+
+        <!-- BS -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div>
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/13%20-%20T.S.jpg">
+                                <h1 style="color:black">"B.S. 07/20/2021" by Mac Barnes</h1>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b>  The sun, whose cross-styled rays represent the "invisible light" of Christ guiding B.S. through life shines bright in the sky. As the rays move through the mountains of life, we see that the valleys we experience can oftentimes be better than the peaks we look up at and admire. Christ put B.S. in the path of the Plainfield tornado of 1990 at the young age of 3 and the tornado took her mother’s life. Miraculously leaving B.S. largely physically untouched, it continues to move and constrains her life’s trajectory. Reaching out, the additional hand shows the progression from constraint to strength. B.S. now has worked tirelessly to overcome being defined by her past experiences, using her own "light" for good, symbolic of becoming a mother herself, being involved in church/choir, and relying on others. However, the "Light" could alternatively be interpreted as going in the reverse direction - it's ambiguous to the viewer. In this sense, the bond between the two hands could be between B.S’s mother and the sacrifice she made to save B.S., or the reciprocated love felt within the church environment, with the light leading her through the treacherous mountains of life.   <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/13%20-%20T.S%20-%20square.jpg" alt="video"
+                    data-toggle="modal" data-target="#modal14"></a>
+        </div>
+        <!--BS-->
+
+        <!-- Hrishika -->
+        <div class="col-lg-4 col-md-12 mb-4">
+            <div class="modal fade" id="modal15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mb-0 p-0">
+                            <div>
+                                <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                     src="../static/images/art/hrishika.PNG">
+                                <h1 style="color:black">"Peasants Can't be Princes" by Hrishika Roychoudhury</h1>
+                                <audio class="music" controls>
+                                    <source src="../static/audio/hrishika.mp3" type="audio/mp3">
+                                </audio>
+                                <p style="color:black;padding:10px;"><b>Artist Statement:</b>This is the story of a young commoner, dreaming of a future never before achieved by someone of his status. He was dedicated to making his fantasy a reality, toiling away for days, months, years. However, he was met with many setbacks. Nobody believed that such a achievement could be possible, that it was a mere dream. The imagined future was one of uncharted territories, and nobody was willing to take a step into the unknown. However this story shows that risks are necessary in the process of reaching a goal or a dream. In a time when much about the future is uncharted, it is up to us to get up and take that step forward.    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a><img class="img-fluid z-depth-1" src="../static/images/art/hrishika.PNG" alt="video"
+                    data-toggle="modal" data-target="#modal15"></a>
+        </div>
+        <!-- Hrishika -->
+    </div>
+
+<div class="row">
+    <!-- Zora 6-->
+    <div class="col-lg-4 col-md-12 mb-4">
+        <div class="modal fade" id="modal16" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-body mb-0 p-0">
+                        <div>
+                            <img style="object-fit: cover;width: 100%;height:100%;" class="embed-responsive-item"
+                                 src="../static/images/art/6%20-%20Zora.jpeg">
+                            <h1 style="color:black">"Madeline" by Zorabella Adrignola</h1>
+                            <p style="color:black;padding:10px;"><b>Artist Statement:</b>  A girl standing in the middle of a theater, surrounded by flowers after a successful performance. She is shown with a calm and content expression.   <br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a><img class="img-fluid z-depth-1" src="../static/images/art/6%20-%20Zora%20-%20square.jpeg" alt="video"
+                data-toggle="modal" data-target="#modal16"></a>
+    </div>
+    <!-- Zora 6-->
+</div>
 </div>
 
-<div class="slideshow-container" style="display:none">
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
 
-    <div class="mySlides">
-        <img id="art1" src="../static/images/art/mac.png" alt="sample art">
-        <br><br>
-        <div class="descr1"><b>First Place: "A Walk in Their Shoes" by Mac Barnes</b>
-            <br><br>
-            <p>Mac Description</p>
-        </div>
-    </div>
+<form style="text-align: center" action={{url_for('home')}} method="get">
+    <button type="submit" class="btn btn-outline-primary">Back to
+        Lobby
+    </button>
+</form>
+<br>
 
-
-    <div class="mySlides">
-        <audio class="music" controls>
-            <source src="../static/audio/ozi.mp3" type="audio/mp3">
-        </audio>
-
-        <div class="descr1"><br>
-        <div><b>First Place: "April, 2020" by Ozioma Obi</b></div>
-            <br>
-            <p> Ozi Description
-            </p></div>
-    </div>
-
-    <div class="mySlides">
-        <img id="art2" src="../static/images/art/vyshu.png" alt="sample art">
-        <br><br>
-        <div class="descr1"><b>Runner Up: by Vyshu Sabbi</b>
-            <br><br>
-            <p>Vyshu Description</div>
-    </div>
-
-    <div class="mySlides">
-        <audio class="music" controls>
-            <source src="../static/audio/Rise.mp3" type="audio/mp3">
-        </audio><br>
-        <div class="descr1"><div><b>Runner Up: "Lands Beyond" by Jolie Duquene</b> </div>
-            <br><p>Jolie Description  </p></div>
-    </div>
-
-    </div>
-
-
-    <div class="w3-center">
-        <button class="btn btn-outline-primary" onclick="plusDivs(-1)">&#10094; Prev</button>
-        <button class="btn btn-outline-primary" onclick="plusDivs(1)">Next &#10095;</button>
-        <br><br>
-        <span>Art</span>
-        <button class="btn btn-outline-primary" onclick="currentDiv(1)">1</button>
-        <button class="btn btn-outline-primary" onclick="currentDiv(3)">2</button>
-        <button class="btn btn-outline-primary" onclick="currentDiv(5)">3</button>
-        <button class="btn btn-outline-primary" onclick="currentDiv(7)">4</button>
-        <button class="btn btn-outline-primary" onclick="currentDiv(9)">5</button>
-        <span>Music</span>
-        <button class="btn btn-outline-primary" onclick="currentDiv(2)">1</button>
-        <button class="btn btn-outline-primary" onclick="currentDiv(4)">2</button>
-        <button class="btn btn-outline-primary" onclick="currentDiv(6)">3</button>
-        <button class="btn btn-outline-primary" onclick="currentDiv(8)">4</button>
-        <button class="btn btn-outline-primary"onclick="currentDiv(10)">5</button>
-    </div>
-    <br>
-
-    <form style="text-align: center" action={{url_for('home')}} method="get">
-        <button type="submit" class="btn btn-outline-primary">Back to
-            Lobby
-        </button>
-    </form>
-    <br>
-    </div>
-
-    <script src="../static/scripts/slideshow.js"></script>
-    <script>
-        $(window).load(function() {
-            $("#loader").fadeOut("fast");
-            $(".slideshow-container").show();
-        });
-    </script>
 {% endblock %}

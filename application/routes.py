@@ -26,16 +26,17 @@ def committee():
         "title": "DPT",
         "image": "../static/images/team%20members/michelle.jpg"
     },
-    {
-        "name": "Rachel",
-        "title": "DPT",
-        "image": "../static/images/team%20members/rachel.jpg"
-    },
-    {
-        "name": "Saahil",
-        "title": "DPT",
-        "image": "../static/images/team%20members/saahil.jpg"
-    }], "exec": [{
+    # {
+    #     "name": "Rachel",
+    #     "title": "DPT",
+    #     "image": "../static/images/team%20members/rachel.jpg"
+    # },
+    # {
+    #     "name": "Saahil",
+    #     "title": "DPT",
+    #     "image": "../static/images/team%20members/saahil.jpg"
+    # }
+    ], "exec": [{
         "name": "Sree",
         "title": "Executive Chair",
         "image": "../static/images/team%20members/sree.jpg"
