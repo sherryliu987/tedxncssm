@@ -141,7 +141,7 @@ def committee():
     {
         "name": "Maddie",
         "title": "Audience",
-        "image": "../static/images/team%20members/maddie.JPG"
+        "image": "../static/images/team%20members/maddie.jpg"
     }
     ]}
 
