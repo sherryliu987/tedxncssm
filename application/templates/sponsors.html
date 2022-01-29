@@ -15,47 +15,112 @@
     img{
         width:50%;
     }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+    .center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
     </style>
 {% endblock %}
 
 {% block content %}
 <br>
-<p style="text-align:center; font-size:20px; font-family: Georgia,Times New Roman,Times,serif; font-style: italic">A huge thank you to all of the sponsors who made this event happen,
-    and to TEDx for creating a platform for ideas worth spreading! Click to learn more about our sponsors.
-<div style="width:95%; height:50%;margin:0 auto">
 
-    <marquee>
+<div style="width:95%; height:50%;margin:0 auto; text-align: center">
+    <p style="text-align:center; font-size:20px; font-family: Georgia,Times New Roman,Times,serif; font-style: italic">A huge thank you to all of the sponsors who made this event happen,
+        and to TEDx for creating a platform for ideas worth spreading! Click to learn more about our sponsors.
+    <div>
+    <div class="row" >
+        <div class="column center">
+            <img  class="center" src="../static/images/sponsors/monuts.png" alt="monuts logo"
+                  onclick=window.open("https://www.monutsdonuts.com/") >
+            <img src="../static/images/sponsors/Toffee.png" alt="Durham Toffee Co"
+                 onclick=window.open("https://durhamtoffee.com/") >
+        </div>
+        <div class="column center">
+            <img  src="../static/images/sponsors/foray.png" alt="Foray Technologies"
+                  onclick=window.open("https://foray.com/") >
+            <img  src="../static/images/sponsors/pincho.png" alt="Pincho Loco"
+                  onclick=window.open("https://pincho-loco.business.site/") >
+        </div>
+        <div class="column center">
+            <img  alt="NCSSM logo" src="../static/images/sponsors/NCSSM.png"
+                  onclick=window.open("https://www.ncssm.edu/")>
+            <img src="../static/images/sponsors/tedx.png" alt="TEDx"
+                 onclick=window.open("https://www.ted.com/") >
+        </div>
+    </div>
+    </div>
 
-        <img  src="../static/images/sponsors/monuts.png" alt="monuts logo"
-              onclick=window.open("https://www.monutsdonuts.com/") >
-        <img src="../static/images/sponsors/Toffee.png" alt="Durham Toffee Co"
-             onclick=window.open("https://durhamtoffee.com/") >
-        <img  src="../static/images/sponsors/foray.png" alt="Foray Technologies"
-              onclick=window.open("https://foray.com/") >
-        <img  src="../static/images/sponsors/pincho.png" alt="Pincho Loco"
-              onclick=window.open("https://pincho-loco.business.site/") >
-        <img  alt="NCSSM logo" src="../static/images/sponsors/NCSSM.png"
-              onclick=window.open("https://www.ncssm.edu/")>
-        <img src="../static/images/sponsors/tedx.png" alt="TEDx"
-             onclick=window.open("https://www.ted.com/") >
+    <p style="text-align:center; font-size:20px; font-family: Georgia,Times New Roman,Times,serif; font-style: italic">
+        Thank you to our faculty sponsor <b> Nina Kornegay</b> for supporting our team throughout the year. Thank you
+        to <b>Dr. Amy Sheck</b> for providing guidance in the planning process.
+        Thank you to faculty <b>Scott Laird</b> and <b>Carrie Alter </b> for judging this
+        year's Art and Music Competition.</p>
 
-    </marquee>
+    <br>
+    <form style="text-align: center" action={{url_for('home')}} method="get">
+        <button type="submit" class="btn btn-outline-primary">Back to
+            Lobby
+        </button>
+    </form>
+    </div>
 
-<p style="text-align:center; font-size:20px; font-family: Georgia,Times New Roman,Times,serif; font-style: italic">
-    Thank you to our faculty sponsor <b> Nina Kornegay</b> for supporting our team throughout the year. Thank you
-    to <b>Dr. Amy Sheck</b> for providing guidance in the planning process.
-    Thank you to faculty <b>Scott Laird</b> and <b>Carrie Alter </b> for judging this
-    year's Art and Music Competition.
+<!--    <marquee>-->
+
+<!--        <img  src="../static/images/sponsors/monuts.png" alt="monuts logo"-->
+<!--              onclick=window.open("https://www.monutsdonuts.com/") >-->
+<!--        <img src="../static/images/sponsors/Toffee.png" alt="Durham Toffee Co"-->
+<!--             onclick=window.open("https://durhamtoffee.com/") >-->
+<!--        <img  src="../static/images/sponsors/foray.png" alt="Foray Technologies"-->
+<!--              onclick=window.open("https://foray.com/") >-->
+<!--        <img  src="../static/images/sponsors/pincho.png" alt="Pincho Loco"-->
+<!--              onclick=window.open("https://pincho-loco.business.site/") >-->
+<!--        <img  alt="NCSSM logo" src="../static/images/sponsors/NCSSM.png"-->
+<!--              onclick=window.open("https://www.ncssm.edu/")>-->
+<!--        <img src="../static/images/sponsors/tedx.png" alt="TEDx"-->
+<!--             onclick=window.open("https://www.ted.com/") >-->
+
+<!--    </marquee>-->
 
 
-</div>
 
-<br>
-<form style="text-align: center" action={{url_for('home')}} method="get">
-    <button type="submit" class="btn btn-outline-primary">Back to
-        Lobby
-    </button>
-</form>
+
 <br>
 
 {% endblock %}
